@@ -8,7 +8,7 @@ body {
 	font-style: normal;
 }
 
-.VisuallyHidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active) {
 	position: absolute;
 	width: 1px;
 	height: 1px;

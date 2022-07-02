@@ -7,13 +7,13 @@ $breakpoints: (
 	desktop: 1366px
 );
 
-.Container {
+.container {
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
 }
 
 @include media(">=tablet") {
-	.Container {
+	.container {
 		width: auto;
 		margin: 0;
 		padding-left: 4.5rem;
@@ -22,7 +22,7 @@ $breakpoints: (
 }
 
 @include media(">=desktop") {
-	.Container {
+	.cntainer {
 		position: relative;
 		max-width: 116.6rem;
 		margin: 0 auto;

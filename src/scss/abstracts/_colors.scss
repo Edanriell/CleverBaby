@@ -1,29 +1,20 @@
 $colors: (
 	primary: (
-		300: hsl(340deg, 5%, 12%),
-		400: hsl(330deg, 4%, 9%)
+		"dark-blue": hsl(223, 66%, 21%), //#122659
+		"dark-blue2": hsl(223, 66%, 21%),
 	),
 	secondary: (
-		300: hsl(0deg, 0%, 100%),
-		400: hsla(0deg, 0%, 100%, 72.2%)
+		"snow-white": hsl(37, 67%, 98%), //#FDFAF5
+		"snow-white2": hsl(30, 67%, 99%), //#FEFCFA
 		),
 	accent: (
-		300: hsl(32deg, 33%, 47%),
-		400: hsla(32deg, 33%, 47%, 94%),
-		500: hsl(30deg, 28%, 82%),
-		600: hsl(31deg, 85%, 95%), 
-		700: hsla(31deg, 85%, 95%, 83%),
-		800: hsl(30deg, 25%, 26%),
-		900: hsla(32deg, 33%, 47%, 27.1%),
-		1000: hsl(30deg, 20%, 80%),
-		1100: hsla(32deg, 33%, 47%, 43%)
+		"yellow": hsl(40, 100%, 76%), //#FFD787
+		"bright-yellow": hsl(43, 88%, 64%), //#F4C752
+		"sky-blue": hsl(188, 63%, 73%), //#8DD9E5
+		"pink": hsl(343, 97%, 86%), //#FEB9CC
 	),
 	neutral: (
-		300: hsla(0deg, 0%, 100%, 20%),
-		400: hsla(0deg, 0%, 100%, 72%),
-		500: hsl(0deg, 5%, 8%),
-		600: hsla(0deg, 0%, 0%, 25%),
-		700: hsla(0deg, 0%, 0%, 30%),
-		800: hsla(0deg, 0%, 100%, 61%)
+		"white": hsl(0, 0%, 100%), //#FFFFFF
+		"gray-blue": hsl(222, 13%, 46%) //#677085
 	)
 );

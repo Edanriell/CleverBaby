@@ -17,24 +17,10 @@ const ESLintPlugin = require("eslint-webpack-plugin");
 const path = require("path");
 
 let mode = "development";
-if (process.env.NODE_ENV === "production") {
-	mode = "production";
-}
+
+if (process.env.NODE_ENV === "production") mode = "production";
 
 console.log(`Webpack mode: ${mode.toUpperCase()}`);
-
-const cssLoaders = loader => {
-	const loaders = [{ loader: "css-loader" }, "postcss-loader", { loader: "sass-loader" }];
-	if (mode === "development") {
-		loaders.unshift("style-loader");
-	} else {
-		loaders.unshift(MiniCssExtractPlugin.loader);
-	}
-
-	if (loader) loaders.push(...loader);
-
-	return loaders;
-};
 
 const jsLoaders = () => {
 	const loaders = [
@@ -42,7 +28,18 @@ const jsLoaders = () => {
 			loader: "babel-loader"
 		}
 	];
+
 	return loaders;
+};
+
+const postCssPlugins = plugins => {
+	const config = {
+		plugins: [["postcss-preset-env", {}]]
+	};
+
+	if (plugins) config.plugins.push(...plugins);
+
+	return config;
 };
 
 const plugins = () => {
@@ -58,7 +55,31 @@ const plugins = () => {
 		new TerserPlugin(),
 		new ESLintPlugin()
 	];
+
 	return mainPlugins;
+};
+
+const cssLoaders = loader => {
+	const loaders = [
+		{ loader: "css-loader" },
+		{
+			loader: "postcss-loader",
+			options: {
+				postcssOptions: postCssPlugins()
+			}
+		},
+		{ loader: "sass-loader" }
+	];
+
+	if (mode === "development") {
+		loaders.unshift("style-loader");
+	} else {
+		loaders.unshift(MiniCssExtractPlugin.loader);
+	}
+
+	if (loader) loaders.push(...loader);
+
+	return loaders;
 };
 
 const optimization = () => {
@@ -101,7 +122,6 @@ module.exports = {
 	output: {
 		filename: "[name].[contenthash].js",
 		path: path.resolve(__dirname, "dist")
-		// clean: true
 	},
 	plugins: plugins(),
 	module: {
@@ -115,7 +135,7 @@ module.exports = {
 				use: cssLoaders()
 			},
 			{
-				test: /\.(png|jpg|jpeg|gif)$/i,
+				test: /\.(png|jpg|jpeg|gif|webp)$/i,
 				type: "asset/resource",
 				generator: {
 					filename: "assets/images/[name][ext]"
@@ -133,6 +153,13 @@ module.exports = {
 				type: "asset/resource",
 				generator: {
 					filename: "assets/images/[name][ext]"
+				}
+			},
+			{
+				test: /\.(mp4)$/i,
+				type: "asset/resource",
+				generator: {
+					filename: "assets/static/[name][ext]"
 				}
 			},
 			{
