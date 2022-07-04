@@ -1,0 +1,24 @@
+@use "../abstracts/mixins" as *;
+
+.header {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: var(--clr-secondary-snow-white2);
+}
+
+.header__wrapper {
+    @include flex(center, flex-end, row-reverse);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

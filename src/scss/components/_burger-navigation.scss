@@ -1,0 +1,14 @@
+@use "../abstracts/mixins" as *;
+
+.burger-navigation {
+    width: 2.4rem;
+    height: 1.4rem; // possibly fix
+    cursor: pointer;
+    @include flex(center, space-between, column);
+}
+
+.burger-navigation__bar {
+    width: 2.4rem;
+    height: 0.2rem;
+    background-color: var(--clr-primary-dark-blue);
+}
