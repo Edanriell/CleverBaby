@@ -1,0 +1,60 @@
+@use "../abstracts/mixins" as *;
+
+.hero {
+    position: relative;
+    background-image: url("../images/main-picture-mobile.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 30.4rem;
+}
+
+.hero__wrapper {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.hero__title {
+    margin-left: 1rem;
+    font-family: var(--ff-normal-500b);
+    font-size: var(--fs-320-28);
+    font-weight: 500;
+    line-height: 3.9rem;
+    color: var(--clr-primary-dark-blue);
+    @include flex(flex-start, flex-start, column);
+    padding-bottom: 0.7142857em;
+}
+
+.hero__subtitle {
+    font-family: var(--ff-normal-500b);
+    font-size: var(--fs-320-16);
+    font-weight: 500;
+    line-height: 2.2rem;
+    color: var(--clr-primary-dark-blue);
+}
+
+.hero__text {
+    margin-left: 1rem;
+    font-family: var(--ff-normal-400);
+    font-size: var(--fs-320-14);
+    line-height: 2rem;
+    color: var(--clr-primary-dark-blue);
+    padding-bottom: 2.142857em;
+    max-width: 22.4rem;
+}
+
+.hero__car-image {
+    width: 4.8rem;
+    height: 3.8rem;
+    fill: none;
+    position: absolute;
+    top: 1.2rem;
+    left: 0.3rem;
+}
+
+.hero__cloud-image {
+    display: none;
+}
+
+.hero__button {
+    margin-left: 1rem;
+}

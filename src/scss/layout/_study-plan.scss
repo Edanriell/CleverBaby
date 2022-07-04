@@ -1,0 +1,68 @@
+@use "../abstracts/mixins" as *;
+
+.study-plan {
+    position: relative;
+}
+
+.study-plan__wrapper {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.study-plan__section-header {
+    font-size: var(--fs-320-22);
+    padding-bottom: 1.818181em;
+}
+
+.study-plan__description {
+}
+
+.study-plan__main-slogan {
+    font-family: var(--ff-normal-500);
+    font-weight: 500;
+    font-size: var(--fs-320-16);
+    line-height: 2.2rem;
+    color: var(--clr-primary-dark-blue);
+    max-width: 17.6rem;
+    padding-bottom: 1.5625em;
+    display: block;
+}
+
+.study-plan__text {
+    font-family: var(--ff-normal-400);
+    color: var(--clr-primary-dark-blue);
+    font-size: var(--fs-320-14);
+    line-height: 2rem;
+    max-width: 28rem;
+}
+
+.study-plan__video {
+    position: relative;
+}
+
+.study-plan__video-name {
+    font-family: var(--ff-normal-500);
+    font-weight: 500;
+    font-size: var(--fs-320-16);
+    line-height: 2.2rem;
+    color: var(--clr-primary-dark-blue);
+    max-width: 23rem;
+    display: block;
+    padding-bottom: 1.5625em;
+}
+
+.study-plan__video-player {
+}
+
+.study-plan__rocket-image {
+    width: 6.7rem;
+    height: 3.4rem;
+    fill: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.study-plan__girl-image {
+    display: none;
+}

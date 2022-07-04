@@ -415,101 +415,107 @@
 				</address>
 			</div>
 		</header>
-		<main>
+		<main class="main">
 			<h1 class="visually-hidden">Школа английского языка для детей Clever Baby</h1>
-			<section>
-				<div>
-					<h2>
+			<section class="hero">
+				<div class="hero__wrapper container">
+					<h2 class="hero__title">
 						Английский язык
-						<span>для детей от 2 до 7 лет</span>
+						<span class="hero__subtitle">для детей от 2 до 7 лет</span>
 					</h2>
-					<p>
+					<p class="hero__text">
 						Гармоничное развитие детей и обучение через полное погружение в языковую
 						среду
 					</p>
-					<button type="button">Записаться</button>
+					<button class="button button--color--yellow button--size--small hero__button" type="button">Записаться</button>
 				</div>
-				<svg focusable="false" aria-hidden="true">
+				<svg class="hero__car-image" focusable="false" aria-hidden="true">
 					<use xlink:href="#blue-car"></use>
 				</svg>
-				<svg focusable="false" aria-hidden="true">
+				<svg class="hero__cloud-image" focusable="false" aria-hidden="true">
 					<use xlink:href="#cloud"></use>
 				</svg>
 			</section>
-			<section>
-				<div>
-					<header>
-						<h2>Как проходит обучение</h2>
+			<section class="study-plan">
+				<div class="study-plan__wrapper container">
+					<header class="section-header section-header--position--center study-plan__section-header">
+						<h2 class="section-header__title">Как проходит обучение</h2>
 					</header>
-					<div>
-						<strong>Играя — обучаем, обучая — развиваем</strong>
-						<p>
+					<div class="study-plan__description">
+						<strong class="study-plan__main-slogan">Играя — обучаем, обучая — развиваем</strong>
+						<p class="study-plan__text pb-20">
 							Мы взяли все самое лучшее из традиционных и современных методик обучения
 							и развития детей. Обучение английскому языку происходит легко и
 							интересно, ведь малыши не зубрят материал по учебникам, а познают его
 							через игру, сказки, книги и музыку.
 						</p>
-						<p>
+						<p class="study-plan__text pb-35">
 							Наша методика также включает в себя обучение по программе Cambridge.
 							Благодаря этому, наши ученики без труда сдают международные и
 							государственные экзамены.
 						</p>
 					</div>
-					<div>
-						<strong>Посмотрите, как проходят наши занятия</strong>
-						<div>
-							<picture>
-								<source
-									type="image/webp"
-									media="(min-width:1366px)"
-									srcset="./images/video-preview-desktop@1x.webp 1x, ./images/video-preview-desktop@2x.webp 2x"
-								/>
-								<source
-									type="image/png"
-									media="(min-width:1366px)"
-									srcset="./images/video-preview-desktop@1x.png 1x, ./images/video-preview-desktop@2x.png 2x"
-								/>
-								<source
-									type="image/webp"
-									media="(min-width:768px)"
-									srcset="./images/video-preview-tablet@1x.webp 1x, ./images/video-preview-tablet@2x.webp 2x"
-								/>
-								<source
-									type="image/png"
-									media="(min-width:768px)"
-									srcset="./images/video-preview-tablet@1x.png 1x, ./images/video-preview-tablet@2x.png 2x"
-								/>
-								<source
-									type="image/webp"
-									media="(min-width:320px)"
-									srcset="./images/video-preview-mobile@1x.webp 1x, ./images/video-preview-mobile@2x.webp 2x"
-								/>
-								<source
-									type="image/png"
-									media="(min-width:320px)"
-									srcset="./images/video-preview-mobile@1x.png 1x, ./images/video-preview-mobile@2x.png 2x"
-								/>
-								<img
-									src="./images/video-preview-desktop@1x.png"
-									alt="На картинке играющий малыш"
-								/>
-							</picture>
-							<video
-								src="./static/video/sample.mp4"
-								poster="./images/video-preview-desktop@1x.png"
-								preload="metadata"
-								controls=""
-							></video>
-							<button type="button">
-								<span class="visually-hidden">Запустить видео</span>
-							</button>
+					<div class="study-plan__video">
+						<strong class="study-plan__video-name">Посмотрите, как проходят наши занятия</strong>
+						<div class="study-plan__video-player video-player">
+							<div class="video-player__player-wrapper">
+								<picture class="video-player__image-wrapper">
+									<source
+										type="image/webp"
+										media="(min-width:1366px)"
+										srcset="./images/video-preview-desktop@1x.webp 1x, ./images/video-preview-desktop@2x.webp 2x"
+									/>
+									<source
+										type="image/png"
+										media="(min-width:1366px)"
+										srcset="./images/video-preview-desktop@1x.png 1x, ./images/video-preview-desktop@2x.png 2x"
+									/>
+									<source
+										type="image/webp"
+										media="(min-width:768px)"
+										srcset="./images/video-preview-tablet@1x.webp 1x, ./images/video-preview-tablet@2x.webp 2x"
+									/>
+									<source
+										type="image/png"
+										media="(min-width:768px)"
+										srcset="./images/video-preview-tablet@1x.png 1x, ./images/video-preview-tablet@2x.png 2x"
+									/>
+									<source
+										type="image/webp"
+										media="(min-width:320px)"
+										srcset="./images/video-preview-mobile@1x.webp 1x, ./images/video-preview-mobile@2x.webp 2x"
+									/>
+									<source
+										type="image/png"
+										media="(min-width:320px)"
+										srcset="./images/video-preview-mobile@1x.png 1x, ./images/video-preview-mobile@2x.png 2x"
+									/>
+									<img
+										class="video-player__image"
+										src="./images/video-preview-desktop@1x.png"
+										alt="На картинке играющий малыш"
+									/>
+								</picture>
+								<video
+									class="video-player__player"
+									src="./static/video/sample.mp4"
+									poster="./images/video-preview-desktop@1x.png"
+									preload="metadata"
+									controls=""
+								></video>
+							</div>
+							<div class="video-player__play-button-wrapper">
+								<button class="video-player__play-button" type="button">
+									<span class="visually-hidden">Запустить видео</span>
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
-				<svg focusable="false" aria-hidden="true">
+				<svg class="study-plan__rocket-image" focusable="false" aria-hidden="true">
 					<use xlink:href="#rocket"></use>
 				</svg>
-				<svg focusable="false" aria-hidden="true">
+				<svg class="study-plan__girl-image" focusable="false" aria-hidden="true">
 					<use xlink:href="#girl"></use>
 				</svg>
 			</section>

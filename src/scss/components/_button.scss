@@ -1,0 +1,18 @@
+.button {
+    font-family: var(--ff-normal-500);
+    font-size: var(--fs-320-14);
+    line-height: 2rem;
+    font-weight: 500;
+    color: var(--clr-primary-dark-blue);
+    cursor: pointer;
+    display: block;
+}
+
+.button--color--yellow {
+    background-color: var(--clr-accent-yellow);
+    border-radius: 3.5rem;
+}
+
+.button--size--small {
+    padding: 0.92857em 1.64285em 0.92857em 1.64285em;
+}

@@ -1,0 +1,14 @@
+.section-header {
+    font-family: var(--ff-normal-500b);
+    color: var(--clr-primary-dark-blue);
+    font-weight: 500;
+}
+
+.section-header--position--center {
+    text-align: center;
+}
+
+.section-header__title {
+    font-size: var(--fs-320-22);
+    line-height: 3.1rem;
+}
