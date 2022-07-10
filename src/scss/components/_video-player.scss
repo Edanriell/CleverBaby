@@ -64,3 +64,16 @@
     background-color: transparent;
     border-radius: 50%;
 }
+
+.video-player__play-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+    width: 0;
+    height: 0;
+    border-top: 8.5px solid transparent;
+    border-left: 12px solid var(--clr-secondary-snow-white);
+    border-bottom: 8.5px solid transparent;
+}

@@ -1,0 +1,38 @@
+.trial-lesson {
+    position: relative;
+    background-image: url("../images/background-image-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100% 38.4rem;
+    background-color: var(--clr-secondary-snow-white2);
+}
+
+.trial-lesson__wrapper {
+    padding-top: 6.3rem;
+    padding-bottom: 7rem;
+}
+
+.trial-lesson__section-title {
+    font-family: var(--ff-normal-500b);
+    font-weight: 500;
+    font-size: var(--fs-320-22);
+    line-height: 2.8rem;
+    color: var(--clr-secondary-snow-white2);
+    text-align: center;
+    margin-bottom: 0.9090909em;
+}
+
+.trial-lesson__section-text {
+    font-size: var(--fs-320-14);
+    color: var(--clr-secondary-snow-white2);
+    line-height: 2rem;
+    text-align: center;
+    margin-bottom: 1.78571428em;
+}
+
+.trial-lesson__rainbow-image {
+    display: none;
+}
+
+.trial-lesson__boy-image {
+    display: none;
+}

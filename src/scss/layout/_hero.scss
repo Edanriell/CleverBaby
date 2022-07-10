@@ -6,10 +6,11 @@
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 100% 30.4rem;
+    background-color: var(--clr-secondary-snow-white2);
 }
 
 .hero__wrapper {
-    padding-top: 6rem;
+    padding-top: 5rem;
     padding-bottom: 6rem;
 }
 
@@ -21,7 +22,7 @@
     line-height: 3.9rem;
     color: var(--clr-primary-dark-blue);
     @include flex(flex-start, flex-start, column);
-    padding-bottom: 0.7142857em;
+    padding-bottom: 0.357142em;
 }
 
 .hero__subtitle {
@@ -38,7 +39,7 @@
     font-size: var(--fs-320-14);
     line-height: 2rem;
     color: var(--clr-primary-dark-blue);
-    padding-bottom: 2.142857em;
+    padding-bottom: 1.7857142em;
     max-width: 22.4rem;
 }
 

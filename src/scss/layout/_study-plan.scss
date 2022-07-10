@@ -2,16 +2,17 @@
 
 .study-plan {
     position: relative;
+    background-color: var(--clr-secondary-snow-white2);
 }
 
 .study-plan__wrapper {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
 }
 
 .study-plan__section-header {
     font-size: var(--fs-320-22);
-    padding-bottom: 1.818181em;
+    padding-bottom: 1.363636em;
 }
 
 .study-plan__description {
@@ -24,7 +25,7 @@
     line-height: 2.2rem;
     color: var(--clr-primary-dark-blue);
     max-width: 17.6rem;
-    padding-bottom: 1.5625em;
+    padding-bottom: 0.9375em;
     display: block;
 }
 
@@ -48,7 +49,7 @@
     color: var(--clr-primary-dark-blue);
     max-width: 23rem;
     display: block;
-    padding-bottom: 1.5625em;
+    padding-bottom: 1.25em;
 }
 
 .study-plan__video-player {
@@ -59,8 +60,8 @@
     height: 3.4rem;
     fill: none;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 1.3rem;
+    right: 1.5rem;
 }
 
 .study-plan__girl-image {

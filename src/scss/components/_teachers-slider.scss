@@ -1,0 +1,71 @@
+.teachers-slider {
+    position: relative;
+    max-width: 29rem;
+}
+
+.teachers-slider__wrapper {
+}
+
+.teachers-slider__slide {
+}
+
+.teachers-slider__slide:nth-child(2) {
+    display: none;
+}
+
+.teachers-slider__slide:nth-child(3) {
+    display: none;
+}
+
+.teachers-slider__slide:nth-child(4) {
+    display: none;
+}
+
+.teachers-slider__teacher-image-wrapper {
+    border-radius: 1.2rem;
+}
+
+.teachers-slider__teacher-image {
+    border-radius: inherit;
+}
+
+.teachers-slider__teacher-name {
+    display: block;
+    text-align: center;
+    font-family: var(--ff-normal-500);
+    font-weight: 500;
+    line-height: 2.2rem;
+    margin-top: 0.625em;
+}
+
+.teachers-slider__teacher-home-land {
+    text-align: center;
+    color: var(--clr-neutral-gray-blue);
+    font-size: var(--fs-320-14);
+    line-height: 2rem;
+}
+
+.teachers-slider__button-prev {
+    fill: none;
+    width: 1.5rem;
+    height: 0.8rem;
+    position: absolute;
+    bottom: 3.4rem;
+    left: 0;
+    cursor: pointer;
+}
+
+.teachers-slider__arrow-icon {
+    width: inherit;
+    height: inherit;
+}
+
+.teachers-slider__button-next {
+    fill: none;
+    width: 1.5rem;
+    height: 0.8rem;
+    position: absolute;
+    bottom: 3.4rem;
+    right: 0;
+    cursor: pointer;
+}

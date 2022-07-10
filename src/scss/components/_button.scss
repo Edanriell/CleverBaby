@@ -6,6 +6,8 @@
     color: var(--clr-primary-dark-blue);
     cursor: pointer;
     display: block;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .button--color--yellow {
@@ -13,6 +15,22 @@
     border-radius: 3.5rem;
 }
 
+.button--color--sky-blue {
+    background-color: var(--clr-accent-sky-blue);
+    border-radius: 3.5rem;
+}
+
+.button--color--pink {
+    background-color: var(--clr-accent-pink);
+    border-radius: 3.5rem;
+}
+
 .button--size--small {
-    padding: 0.92857em 1.64285em 0.92857em 1.64285em;
+    padding: 0.7142857em 1.64285em 0.7142857em 1.64285em;
+}
+
+.button--size--normal {
+    font-size: var(--fs-320-16);
+    line-height: 2.2rem;
+    padding: 0.625em 1.75em 0.625em 1.75em;
 }

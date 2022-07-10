@@ -1,0 +1,34 @@
+.teachers {
+    position: relative;
+    background-color: var(--clr-secondary-snow-white2);
+}
+
+.teachers__wrapper {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+}
+
+.teachers__header-title {
+    line-height: 2.5rem;
+    margin-bottom: 0.90909090em;
+}
+
+.teachers__header-text {
+
+}
+
+.teachers__teachers-slider {
+}
+
+.teachers__house-image {
+    fill: none;
+    width: 3rem;
+    height: 4.8rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.teachers__pencil-image {
+    display: none;
+}

@@ -3,7 +3,7 @@ body {
 	font-family: var(--ff-normal-400);
 	font-size: var(--fs-320-16);
 	color: var(--clr-primary-dark-blue);
-	background-color: var(--clr-primary-snow-white);
+	background-color: var(--clr-primary-snow-white2);
 	font-weight: 400;
 	font-style: normal;
 }
@@ -21,10 +21,14 @@ body {
 	overflow: hidden;
 }
 
+.pb-15 {
+	padding-bottom: 1.5rem;
+}
+
 .pb-20 {
 	padding-bottom: 2rem;
 }
 
-.pb-35 {
-	padding-bottom: 3.5rem;
+.pb-25 {
+	padding-bottom: 2.5rem;
 }

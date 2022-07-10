@@ -1,0 +1,38 @@
+@use "../abstracts/mixins" as *;
+
+.pricing {
+    position: relative;
+    background-color: var(--clr-accent-light-blue);
+}
+
+.pricing__wrapper {
+    padding-bottom: 6rem;
+    padding-top: 6rem;
+}
+
+.pricing__title{
+    font-size: var(--fs-320-22);
+    line-height: 3.08rem;
+    padding-bottom: 0.9090909em;
+}
+
+.pricing__group-list {
+    @include flex(center, center, row);
+    flex-wrap: wrap;
+    row-gap: 3rem;
+}
+
+.group-list {
+}
+
+.group-list__item {
+}
+
+.pricing__star-image {
+    fill: none;
+    width: 3.9rem;
+    height: 4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

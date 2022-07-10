@@ -1,0 +1,125 @@
+.advantages {
+    background-color: var(--clr-secondary-snow-white2);
+    padding-bottom: 5.5rem;
+}
+
+.advantages__wrapper {
+}
+
+.advantages__list {
+    display: grid;
+    grid-template-columns: 25.862% 1fr;
+    grid-template-rows: repeat(5, auto);
+}
+
+.advantages__list-item {
+    grid-column: 2;
+    justify-self: center;
+    max-width: 29rem; // try to change latter
+}
+
+.advantages__list-item:nth-child(1) {
+    order: 1;
+}
+.advantages__list-item:nth-child(2) {
+    order: 4;
+}
+.advantages__list-item:nth-child(3) {
+    order: 3;
+}
+.advantages__list-item:nth-child(4) {
+    order: 2;
+}
+.advantages__list-item:nth-child(5) {
+    order: 5;
+}
+
+.advantages__list-item--type--stretched {
+    grid-column: span 2;
+}
+
+.advantages__list-item-title {
+    color: var(--clr-primary-dark-blue);
+    font-family: var(--ff-normal-500);
+    font-weight: 500;
+    font-size: var(--fs-320-16);
+    line-height: 2.2rem;
+    padding-bottom: 0.3125em;
+}
+
+.advantages__list-item-description {
+    font-size: var(--fs-320-14);
+    line-height: 2rem;
+    color: var(--clr-primary-dark-blue);
+}
+
+.advantages__list-item-picture-wrapper {
+    position: relative;
+}
+
+.advantages__list-item-picture {
+}
+
+.advantages__list-item-picture-arrow1--size--desktop {
+    display: none;
+}
+
+.advantages__list-item-picture-arrow2--size--desktop {
+    display: none;
+}
+
+.advantages__list-item-picture-arrow3--size--desktop {
+    display: none;
+}
+
+.advantages__list-item-picture-arrow4--size--desktop {
+    display: none;
+}
+
+.advantages__list-item-picture-arrow1--size--tablet {
+    display: none;
+}
+
+.advantages__list-item-picture-arrow2--size--tablet {
+    display: none;
+}
+
+.advantages__list-item-picture-arrow3--size--tablet {
+    display: none;
+}
+
+.advantages__list-item-picture-arrow1--size--mobile {
+    position: absolute;
+    top: -13rem;
+    left: -16rem;
+    fill: none;
+    width: auto;
+    height: 17.4rem;
+}
+
+.advantages__list-item-picture-arrow2--size--mobile {
+    position: absolute;
+    bottom: -0.5rem;
+    right: 6rem;
+    fill: none;
+    width: auto;
+    height: 6.8rem;
+}
+
+.advantages__list-item-picture-arrow3--size--mobile {
+    position: absolute;
+    top: -1rem;
+    left: 5rem;
+    fill: none;
+    width: auto;
+    height: 7.1rem;
+}
+
+.advantages__list-item-picture-arrow4--size--mobile {
+    position: absolute;
+    bottom: -15rem;
+    left: 5.5rem;
+    fill: none;
+    width: auto;
+    height: 20.6rem;
+}

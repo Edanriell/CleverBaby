@@ -1,0 +1,70 @@
+@use "../abstracts/mixins" as *;
+
+.group-card {
+    box-sizing: border-box;
+    min-width: 29rem;
+    border-radius: 1.2rem;
+    padding-top: 3.5rem;
+    padding-bottom: 4rem;
+}
+
+.group-card__title {
+    color: var(--clr-primary-dark-blue);
+    font-family: var(--ff-normal-500);
+    font-weight: 500;
+    font-size: var(--fs-320-20);
+    line-height: 2.8rem;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.group-card__lesson-schedule {
+    @include flex(center, center, column);
+}
+
+.group-card__number-of-lessons {
+    line-height: 2.2rem;
+    margin-bottom: 0.625em;
+}
+
+.group-card__lesson-length {
+    line-height: 2.2rem;
+    margin-bottom: 0.9375em;
+}
+
+.group-card__full-price {
+    line-height: 2.24rem;
+    text-align: center;
+    margin-bottom: 1.875em;
+}
+
+.group-card__price {
+    font-family: var(--ff-normal-500);
+    font-weight: 500;
+    font-size: var(--fs-320-20);
+    line-height: 2.8rem;
+}
+
+.group-card__ruble-sign-wrapper {
+    margin-left: 0.5rem;
+}
+
+.group-card__ruble-sign {
+    fill: none;
+    width: 1.1rem;
+    height: 1.4rem;
+}
+
+.group-card--color--sky-blue {
+    border: 0.3rem solid var(--clr-accent-sky-blue);
+}
+
+.group-card--color--yellow {
+    border: 0.3rem solid var(--clr-accent-yellow);
+}
+
+.group-card--color--pink {
+    border: 0.3rem solid var(--clr-accent-pink);
+}
+
+// fix HTML SPACE

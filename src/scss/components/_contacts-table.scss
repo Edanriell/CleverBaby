@@ -1,0 +1,95 @@
+@use "../abstracts/mixins" as *;
+
+.contacts-table {
+}
+
+.contacts-table__content {
+    background-color: var(--clr-accent-light-blue);
+    box-shadow: 0 0.4rem 4rem rgba(217, 217, 217, 0.3);
+    border-radius: 1.2rem 1.2rem 0 0;
+    padding-top: 5.5rem;
+}
+
+.contacts-table__data {
+}
+
+.contacts-table__table-row {
+    @include flex(flex-start, flex-start, column);
+}
+
+.contacts-table__table-row-name {
+    font-size: var(--fs-320-14);
+    line-height: 2rem;
+    color: var(--clr-primary-dark-blue);
+    padding-bottom: 0.35714285em;
+}
+
+.contacts-table__table-row-description {
+    font-family: var(--ff-normal-500);
+    font-weight: 500;
+    line-height: 2.2rem;
+    color: var(--clr-primary-dark-blue);
+    padding-bottom: 0.9375em;
+}
+
+.contacts-table__table-content-row {
+    @include flex(flex-start, flex-start, row);
+}
+
+.contacts-table__phone-number {
+}
+
+.contacts-table__email {
+}
+
+.contacts-table__facebook-link {
+    width: 2.4rem;
+    height: 2.4rem;
+    background: var(--clr-neutral-white);
+    box-shadow: 0 0.2rem 1rem rgba(165, 168, 176, 0.1);
+    display: block;
+    border-radius: 50%;
+    @include flex(center, center, row);
+}
+
+.contacts-table__fb-icon {
+    fill: none;
+    width: 0.6rem;
+    height: 1.2rem;
+}
+
+.contacts-table__vk-link {
+    width: 2.4rem;
+    height: 2.4rem;
+    background: var(--clr-neutral-white);
+    box-shadow: 0 0.2rem 1rem rgba(165, 168, 176, 0.1);
+    display: block;
+    border-radius: 50%;
+    @include flex(center, center, row);
+}
+
+.contacts-table__vk-icon {
+    fill: none;
+    width: 1.4rem;
+    height: 0.8rem;
+}
+
+.contacts-table__inst-link {
+    width: 2.4rem;
+    height: 2.4rem;
+    background: var(--clr-neutral-white);
+    box-shadow: 0 0.2rem 1rem rgba(165, 168, 176, 0.1);
+    display: block;
+    border-radius: 50%;
+    @include flex(center, center, row);
+}
+
+.contacts-table__inst-icon {
+    fill: none;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+// FIX MAP
+// FIX LINKS
+// AND FIX HTML
