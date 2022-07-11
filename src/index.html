@@ -920,38 +920,38 @@
 				</svg>
 			</section>
 			<section class="contacts">
-				<div class="contacts__wrapper container">
-					<div class="contacts__contacts-table contacts-table__content">
+				<div class="contacts__wrapper">
+					<div class="contacts__contacts-table contacts-table__content container">
 						<header class="section-header">
 							<h2 class="section-header__title contacts__section-title">Мы ждем вас</h2>
 						</header>
 						<address class="contacts-table">
 							<dl class="contacts-table__data">
-								<div class="contacts-table__table-row">
-									<dt class="contacts-table__table-row-name">Приходите к нам:</dt>
-									<dd class="contacts-table__table-row-description">Санкт-Петербург, ул. Большая Конюшенная, 19</dd>
+								<div class="contacts-table__data-row">
+									<dt class="contacts-table__data-title">Приходите к нам:</dt>
+									<dd class="contacts-table__data-description">Санкт-Петербург, ул. Большая Конюшенная, 19</dd>
 								</div>
-								<div class="contacts-table__table-row">
-									<dt class="contacts-table__table-row-name">Режим работы:</dt>
-									<dd class="contacts-table__table-row-description">Пн-Сб, с 9-00 до 20-00</dd>
+								<div class="contacts-table__data-row">
+									<dt class="contacts-table__data-title">Режим работы:</dt>
+									<dd class="contacts-table__data-description">Пн-Сб, с 9-00 до 20-00</dd>
 								</div>
-								<div class="contacts-table__table-row">
-									<dt class="contacts-table__table-row-name">Позвоните нам:</dt>
-									<dd class="contacts-table__table-row-description">
-										<a class="contacts-table__phone-number" href="tel:+74959834719">+ 7 (495) 983-47-19</a>
+								<div class="contacts-table__data-row">
+									<dt class="contacts-table__data-title">Позвоните нам:</dt>
+									<dd class="contacts-table__data-description">
+										<a class="contacts-table__phone-number-link" href="tel:+74959834719">+ 7 (495) 983-47-19</a>
 									</dd>
 								</div>
-								<div class="contacts-table__table-row">
-									<dt class="contacts-table__table-row-name">Напишите нам:</dt>
-									<dd class="contacts-table__table-row-description">
-										<a class="contacts-table__email" href="mailto:info@cleverbaby.ru">info@cleverbaby.ru</a>
+								<div class="contacts-table__data-row">
+									<dt class="contacts-table__data-title">Напишите нам:</dt>
+									<dd class="contacts-table__data-description">
+										<a class="contacts-table__email-link" href="mailto:info@cleverbaby.ru">info@cleverbaby.ru</a>
 									</dd>
 								</div>
-								<div class="contacts-table__table-row">
-									<dt class="contacts-table__table-row-name">Мы в соцсетях:</dt>
-									<div class="contacts-table__table-content-row">
-										<dd class="contacts-table__table-row-description">
-											<a class="contacts-table__facebook-link" href="#" aria-label="Ссылка на страничку в Facebook">
+								<div class="contacts-table__data-row">
+									<dt class="contacts-table__data-title pb-10">Мы в соцсетях:</dt>
+									<div class="contacts-table__data-content-row">
+										<dd class="contacts-table__data-description">
+											<a class="contacts-table__social-link" href="#" aria-label="Ссылка на страничку в Facebook">
 												<svg class="contacts-table__fb-icon" focusable="false" aria-hidden="true">
 													<use xlink:href="#fb-icon"></use>
 												</svg>
@@ -960,8 +960,8 @@
 												>
 											</a>
 										</dd>
-										<dd class="contacts-table__table-row-description">
-											<a class="contacts-table__vk-link" href="#" aria-label="Ссылка на страничку в VKontakte">
+										<dd class="contacts-table__data-description">
+											<a class="contacts-table__social-link" href="#" aria-label="Ссылка на страничку в VKontakte">
 												<svg class="contacts-table__vk-icon" focusable="false" aria-hidden="true">
 													<use xlink:href="#vk-icon"></use>
 												</svg>
@@ -970,8 +970,8 @@
 												>
 											</a>
 										</dd>
-										<dd class="contacts-table__table-row-description">
-											<a class="contacts-table__inst-link" href="#" aria-label="Ссылка на страничку в Instagram">
+										<dd class="contacts-table__data-description">
+											<a class="contacts-table__social-link" href="#" aria-label="Ссылка на страничку в Instagram">
 												<svg class="contacts-table__inst-icon" focusable="false" aria-hidden="true">
 													<use xlink:href="#inst-icon"></use>
 												</svg>
@@ -990,7 +990,6 @@
 					<iframe
 						class="contacts-map"
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71586.9526049298!2d26.39369523025126!3d55.89575904640507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46c29430ff01c9db%3A0x400cfcd68f307f0!2sDaugavpils!5e0!3m2!1slv!2slv!4v1656444168446!5m2!1slv!2slv"
-						style="border: 0"
 						allowfullscreen=""
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
@@ -998,21 +997,21 @@
 				</div>
 			</section>
 		</main>
-		<footer>
-			<div>
-				<p>
-					<a href="#">
+		<footer class="footer">
+			<div class="footer__wrapper container">
+				<p class="footer__copyright">
+					<a class="footer__copyright-link" href="#">
 						CleverBaby
-						<span>
-							<svg focusable="false" aria-hidden="true">
+						<span class="footer__copyright-symbol">
+							<svg class="footer__copyright-symbol-icon" focusable="false" aria-hidden="true">
 								<use xlink:href="#copyright-symbol"></use>
 							</svg>
 						</span>
 						Все права защищены
 					</a>
 				</p>
-				<small>
-					<a href="#">Политика конфиденциальности</a>
+				<small class="footer__politics">
+					<a class="footer__politics-link" href="#">Политика конфиденциальности</a>
 				</small>
 			</div>
 		</footer>

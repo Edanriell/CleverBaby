@@ -1,0 +1,42 @@
+@use "../abstracts/mixins" as *;
+
+.footer {
+    background-color: var(--clr-secondary-snow-white2);
+}
+
+.footer__wrapper {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    flex-wrap: wrap;
+    @include flex(flex-start, flex-start, row);
+}
+
+.footer__copyright {
+    font-size: var(--fs-320-12);
+    color: var(--clr-primary-dark-blue);
+    line-height: 1.7rem;
+    margin-bottom: 0.83333333em;
+}
+
+.footer__copyright-link {
+}
+
+.footer__copyright-symbol {
+    width: 0.9rem;
+    height: 0.9rem;
+}
+
+.footer__copyright-symbol-icon {
+    fill: none;
+    width: inherit;
+    height: inherit;
+}
+
+.footer__politics {
+    font-size: var(--fs-320-12);
+    color: var(--clr-primary-dark-blue);
+    line-height: 1.7rem;
+}
+
+.footer__politics-link {
+}

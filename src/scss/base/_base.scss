@@ -6,6 +6,7 @@ body {
 	background-color: var(--clr-primary-snow-white2);
 	font-weight: 400;
 	font-style: normal;
+	overflow-x: hidden; // should remove
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -19,6 +20,10 @@ body {
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
+}
+
+.pb-10 {
+	padding-bottom: 1rem !important;
 }
 
 .pb-15 {
