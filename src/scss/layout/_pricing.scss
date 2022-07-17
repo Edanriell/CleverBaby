@@ -1,4 +1,11 @@
 @use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px, // 
+	tablet: 768px,
+	desktop: 1366px
+);
 
 .pricing {
     position: relative;
@@ -20,6 +27,7 @@
     @include flex(center, center, row);
     flex-wrap: wrap;
     row-gap: 3rem;
+    column-gap: 3rem;
 }
 
 .group-list {
@@ -28,11 +36,91 @@
 .group-list__item {
 }
 
+.pricing__image-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
 .pricing__star-image {
     fill: none;
     width: 3.9rem;
     height: 4rem;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -59.5rem;
+    left: -15.5rem;
+}
+
+@include media(">=tablet") {
+    .pricing {
+        background-color: var(--clr-secondary-snow-white2);
+        background-image: url("../images/pricing-background-tablet.png");
+        background-repeat: no-repeat;
+        // background-size: 100% auto;
+        background-size: cover;
+    }
+    
+    .pricing__wrapper {
+        padding-bottom: 11rem;
+        padding-top: 10rem;
+    }
+
+    .pricing__title{
+        font-size: var(--fs-768-36);
+        line-height: 5rem;
+        padding-bottom: unset;
+    }
+    
+    .pricing__group-list {
+        column-gap: 3rem;
+    }
+    
+    .group-list {
+        padding-top: 4.5rem;
+    }
+    
+    .group-list__item {
+        min-width: max(20rem, 24%);
+    }
+    
+    .pricing__star-image {
+        top: -25rem;
+        left: -36rem;
+    }
+}
+
+@include media(">=desktop") {
+    .pricing {
+        background-image: url("../images/pricing-background-desktop.png");
+        background-repeat: no-repeat; //
+        // background-size: 100% auto; //
+        background-size: cover;
+    }
+    
+    .pricing__wrapper {
+        padding-bottom: 18rem;
+        padding-top: 17rem;
+    }
+
+    .pricing__title{
+        font-size: var(--fs-1366-36);
+    }
+    
+    .pricing__group-list {
+        column-gap: 4rem;
+    }
+    
+    .group-list {
+        padding-top: 5rem;
+    }
+    
+    .group-list__item {
+    }
+
+    .pricing__star-image {
+        width: 5.6rem;
+        height: 5.8rem;
+        top: -27.5rem;
+        left: -54.5rem;
+    }
 }

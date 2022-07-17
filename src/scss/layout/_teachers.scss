@@ -1,3 +1,11 @@
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px, //
+	tablet: 768px,
+	desktop: 1366px
+);
+
 .teachers {
     position: relative;
     background-color: var(--clr-secondary-snow-white2);
@@ -18,6 +26,13 @@
 }
 
 .teachers__teachers-slider {
+    position: relative;
+}
+
+.teachers__image-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
 
 .teachers__house-image {
@@ -25,10 +40,66 @@
     width: 3rem;
     height: 4.8rem;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -27rem;
+    left: 10.5rem;
 }
 
 .teachers__pencil-image {
     display: none;
+}
+
+@include media(">=tablet") {
+    .teachers__wrapper {
+        padding-top: 10rem;
+        padding-bottom: 11rem;
+    }
+    
+    .teachers__header-title {
+        line-height: 4.1rem;
+        margin-bottom: unset;
+        max-width: 27.7rem;
+    }
+    
+    .teachers__header-text {
+       max-width: 26.7rem;
+    }
+    
+    .teachers__house-image {
+        display: none;
+    }
+}
+
+@include media(">=desktop") {
+    .teachers__wrapper {
+        padding-top: 12rem;
+        padding-bottom: 13rem;
+    }
+    
+    .teachers__header-title {
+        line-height: 5rem;
+        max-width: 38.4rem;
+    }
+    
+    .teachers__header-text {
+       max-width: 35rem;
+    }
+    
+    .teachers__house-image {
+        display: block;
+        position: absolute;
+        width: 5.8rem;
+        height: 9.7rem;
+        top: -23.5rem;
+        left: 52rem;
+    }
+    
+    .teachers__pencil-image {
+        display: block;
+        position: absolute;
+        top: 9.5rem;
+        left: -62rem;
+        fill: none;
+        width: 4.4rem;
+        height: 13.2rem;
+    }
 }

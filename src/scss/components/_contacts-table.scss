@@ -1,12 +1,16 @@
 @use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1366px
+);
 
 .contacts-table {
 }
 
 .contacts-table__content {
-    background-color: var(--clr-accent-light-blue);
-    box-shadow: 0 0.4rem 4rem rgba(217, 217, 217, 0.3);
-    border-radius: 1.2rem 1.2rem 0 0;
     padding-top: 5.5rem;
     padding-bottom: calc(6rem - 1.5rem);
 }
@@ -31,6 +35,10 @@
     line-height: 2.2rem;
     color: var(--clr-primary-dark-blue);
     padding-bottom: 0.9375em;
+}
+
+.contacts-table__data-title-social {
+    padding-bottom: 0.7142857em;
 }
 
 .contacts-table__data-content-row {
@@ -70,4 +78,104 @@
     fill: none;
     width: 1.2rem;
     height: 1.2rem;
+}
+
+@include media(">=tablet") {
+    .contacts-table {
+        // background-color: var(--clr-accent-light-blue);
+        // background-color: red;
+    }
+    
+    .contacts-table__content {
+        padding-top: 7rem;
+        padding-bottom: 8rem;
+    }
+    
+    .contacts-table__data {
+        display: grid;
+        grid-template-columns: max(28.3rem, 28%) max(17.6rem, 20%);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+            "address number"
+            "timetable email"
+            "social-links ."
+        ;
+        column-gap: 4rem;
+        row-gap: 2.5rem;
+    }
+
+    .contacts-table__address {
+        grid-area: address;
+    }
+
+    .contacts-table__timetable {
+        grid-area: timetable;
+    }
+
+    .contacts-table__number {
+        grid-area: number;
+    }
+
+    .contacts-table__email {
+        grid-area: email;
+    }
+
+    .contacts-table__social-links {
+        grid-area: social-links;
+    }
+    
+    .contacts-table__data-title {
+        font-size: var(--fs-768-16);
+        line-height: 2.3rem;
+        padding-bottom: 0.625em;
+    }
+    
+    .contacts-table__data-description {
+        font-size: var(--fs-768-18);
+        line-height: 2.5rem;
+        padding-bottom: unset;
+    }
+
+    .contacts-table__data-title-social {
+        padding-bottom: 0.9375em;
+    }
+}
+
+@include media(">=desktop") {
+    .contacts-table {
+    }
+    
+    .contacts-table__content {
+        padding-top: 6rem;
+        padding-bottom: 7rem;
+        padding-left: 7rem;
+        padding-right: 7rem;
+        background-color: var(--clr-accent-light-blue);
+        box-shadow: 0 0.4rem 4rem rgba(217, 217, 217, 0.3);
+        border-radius: 1.2rem;
+        max-width: 41.3rem;
+    }
+    
+    .contacts-table__data {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: 
+            "address"
+            "timetable"
+            "number"
+            "email"
+            "social-links"
+        ;
+        column-gap: unset;
+        row-gap: 2rem;
+    }
+    
+    .contacts-table__data-title {
+        font-size: var(--fs-1366-16);
+    }
+    
+    .contacts-table__data-description {
+        font-size: var(--fs-1366-18);
+    }
 }

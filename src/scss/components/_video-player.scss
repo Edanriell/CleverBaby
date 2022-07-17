@@ -1,8 +1,18 @@
+@use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px, // remove
+	tablet: 768px,
+	desktop: 1366px
+);
+
 .video-player {
-    width: 29rem;
-    height: 26.2rem;
+    width: inherit;
+    height: inherit;
     border-radius: 1.2rem;
     position: relative;
+    @include flex(center, center, row);
 }
 
 .video-player__image-wrapper {
@@ -76,4 +86,18 @@
     border-top: 8.5px solid transparent;
     border-left: 12px solid var(--clr-secondary-snow-white);
     border-bottom: 8.5px solid transparent;
+}
+
+@include media(">=tablet") {        
+    .video-player__player-wrapper{
+        width: 35.4rem;
+        height: 26.2rem;
+    }
+}
+
+@include media(">=desktop") {    
+    .video-player__player-wrapper{
+        width: 43.1rem;
+        height: 23.1rem;
+    }
 }

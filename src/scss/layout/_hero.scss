@@ -1,4 +1,11 @@
 @use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px, // remove
+	tablet: 768px,
+	desktop: 1366px
+);
 
 .hero {
     position: relative;
@@ -7,6 +14,14 @@
     background-repeat: no-repeat;
     background-size: 100% 30.4rem;
     background-color: var(--clr-secondary-snow-white2);
+}
+
+.hero__background-image-mask-desktop {
+    display: none;
+}
+
+.hero__background-image-mask-table {
+    display: none;
 }
 
 .hero__wrapper {
@@ -40,7 +55,13 @@
     line-height: 2rem;
     color: var(--clr-primary-dark-blue);
     padding-bottom: 1.7857142em;
-    max-width: 22.4rem;
+    max-width: max(22.4rem, 68%);
+}
+
+.hero__image-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
 
 .hero__car-image {
@@ -48,8 +69,8 @@
     height: 3.8rem;
     fill: none;
     position: absolute;
-    top: 1.2rem;
-    left: 0.3rem;
+    top: -14rem;
+    left: -15.5rem;
 }
 
 .hero__cloud-image {
@@ -58,4 +79,115 @@
 
 .hero__button {
     margin-left: 1rem;
+}
+
+@include media(">=tablet") {
+    .hero {
+        background-image: url("../images/main-picture-tablet.png");
+        background-size: cover;
+    }
+
+    .hero__background-image-mask-desktop {
+        display: none;
+    }
+
+    .hero__background-image-mask-table {
+        position: absolute;
+        width: 100%;
+        bottom: -2px;
+        display: block;
+    }
+    
+    .hero__wrapper {
+        padding-top: 7.5rem;
+        padding-bottom: 13rem;
+    }
+    
+    .hero__title {
+        margin-left: 0;
+        font-size: var(--fs-768-42);
+        line-height: 5.9rem;
+        padding-bottom: 0.47619047em;
+    }
+    
+    .hero__subtitle {
+        font-size: var(--fs-768-18);
+        line-height: 2.5rem;
+    }
+    
+    .hero__text {
+        margin-left: 0;
+        font-size: var(--fs-768-16);
+        line-height: 2.2rem;
+        padding-bottom: 2.50em;
+        max-width: 55.886736%; // 37.5rem
+    }
+    
+    .hero__car-image {
+        width: 5.8rem;
+        height: 4.6rem;
+        top: -19.5rem;
+        left: -36.5rem;
+    }
+    
+    .hero__button {
+        margin-left: 0;
+    }
+}
+
+@include media(">=desktop") {
+    .hero {
+        background-image: url("../images/main-picture-desktop.png");
+        background-size: cover;
+    }
+
+    .hero__background-image-mask-desktop {
+        display: block;
+        position: absolute;
+        width: 100%;
+        bottom: -2px;
+    }
+
+    .hero__background-image-mask-table {
+        display: none;
+    }
+    
+    .hero__wrapper {
+        padding-top: 12rem;
+        padding-bottom: 16rem;
+    }
+    
+    .hero__title {
+        font-size: var(--fs-1366-42);
+        line-height: 5.9rem;
+        padding-bottom: 0.47619047em;
+    }
+    
+    .hero__subtitle {
+        font-size: var(--fs-1366-18);
+        line-height: 2.5rem;
+    }
+    
+    .hero__text {
+        font-size: var(--fs-1366-16);
+        line-height: 2.2rem;
+        padding-bottom: 2.5em;
+        max-width: 37.5rem;
+    }
+    
+    .hero__car-image {
+        width: 10.6rem;
+        height: 8.4rem;
+        top: -23rem;
+        left: -61rem;
+    }
+    
+    .hero__cloud-image {
+        display: block;
+        position: absolute;
+        width: 9.1rem;
+        height: 6.2rem;
+        top: -20rem;
+        left: 50rem;
+    }
 }

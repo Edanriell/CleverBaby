@@ -1,4 +1,11 @@
 @use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px, // 
+	tablet: 768px,
+	desktop: 1366px
+);
 
 .group-card {
     box-sizing: border-box;
@@ -33,7 +40,7 @@
 }
 
 .group-card__full-price {
-    line-height: 2.24rem;
+    line-height: 2.2rem;
     text-align: center;
     margin-bottom: 1.875em;
 }
@@ -67,4 +74,56 @@
     border: 0.3rem solid var(--clr-accent-pink);
 }
 
-// fix HTML SPACE
+@include media(">=tablet") {
+    .group-card {
+        min-width: inherit; // 20rem
+    }
+    
+    .group-card__title {
+        font-size: var(--fs-768-20);
+    }
+    
+    .group-card__number-of-lessons {
+        font-size: var(--fs-768-16);
+    }
+    
+    .group-card__lesson-length {
+        font-size: var(--fs-768-16);
+    }
+    
+    .group-card__full-price {
+        font-size: var(--fs-768-16);
+    }
+    
+    .group-card__price {
+        font-size: var(--fs-768-20);
+    }
+}
+
+@include media(">=desktop") {
+    .group-card {
+        min-width: 29rem;
+    }
+    
+    .group-card__title {
+        font-size: var(--fs-1366-20);
+        margin-bottom: 1.5em;
+    }
+    
+    .group-card__number-of-lessons {
+        font-size: var(--fs-1366-16);
+    }
+    
+    .group-card__lesson-length {
+        font-size: var(--fs-1366-16);
+        margin-bottom: 0.625em;
+    }
+    
+    .group-card__full-price {
+        font-size: var(--fs-1366-16);
+    }
+    
+    .group-card__price {
+        font-size: var(--fs-1366-20);
+    }
+}

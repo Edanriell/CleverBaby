@@ -1,9 +1,48 @@
+@use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px, // remove
+	tablet: 768px,
+	desktop: 1366px
+);
+
 .main-navigation {
     display: none; // Temporary
 }
-.main-navigation__menu-item {
+
+.main-navigation__menu-item { // remove here
 }
-.main-navigation__menu-link {
+
+.main-navigation__menu-link { // remove here
 }
-.main-navigation__contact-phone {
+
+.main-navigation__contact-phone { // remove here
+}
+
+@include media(">=tablet") {
+    .main-navigation__contact-phone {
+        display: block;
+    }
+}
+
+@include media(">=desktop") {
+    .main-navigation {
+        margin-left: 6rem;
+        column-gap: 2rem;
+        @include flex(flex-start, flex-start, row);
+    }
+    
+    .main-navigation__menu-item {
+    }
+    
+    .main-navigation__menu-link {
+        font-size: var(--fs-1366-16);
+        line-height: 2.2rem;
+        color: var(--clr-primary-dark-blue);
+    }
+    
+    .main-navigation__contact-phone {
+        order: -2;
+    }
 }

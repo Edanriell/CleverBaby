@@ -1,4 +1,11 @@
 @use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px, // remove
+	tablet: 768px,
+	desktop: 1366px
+);
 
 .study-plan {
     position: relative;
@@ -10,12 +17,18 @@
     padding-bottom: 5.5rem;
 }
 
+.study-plan__content {
+    @include flex(center, flex-start, column);
+}
+
 .study-plan__section-header {
     font-size: var(--fs-320-22);
     padding-bottom: 1.363636em;
 }
 
 .study-plan__description {
+    max-width: 60rem;
+    // margin: 0 auto;
 }
 
 .study-plan__main-slogan {
@@ -24,7 +37,7 @@
     font-size: var(--fs-320-16);
     line-height: 2.2rem;
     color: var(--clr-primary-dark-blue);
-    max-width: 17.6rem;
+    max-width: max(17.6rem, 100%);
     padding-bottom: 0.9375em;
     display: block;
 }
@@ -34,7 +47,15 @@
     color: var(--clr-primary-dark-blue);
     font-size: var(--fs-320-14);
     line-height: 2rem;
-    max-width: 28rem;
+    max-width: max(28rem, 100%);
+}
+
+.study-plan__first-text-block {
+    padding-bottom: 1rem;
+}
+
+.study-plan__second-text-block {
+    padding-bottom: 2.5rem;
 }
 
 .study-plan__video {
@@ -47,7 +68,7 @@
     font-size: var(--fs-320-16);
     line-height: 2.2rem;
     color: var(--clr-primary-dark-blue);
-    max-width: 23rem;
+    min-width: 23rem;
     display: block;
     padding-bottom: 1.25em;
 }
@@ -55,15 +76,144 @@
 .study-plan__video-player {
 }
 
+.study-plan__image-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
 .study-plan__rocket-image {
     width: 6.7rem;
     height: 3.4rem;
     fill: none;
     position: absolute;
-    top: 1.3rem;
-    right: 1.5rem;
+    top: -42.5rem;
+    left: 7rem;
 }
 
 .study-plan__girl-image {
     display: none;
+}
+
+@include media(">=tablet") {    
+    .study-plan__wrapper {
+        padding-top: 10rem;
+        padding-bottom: 5.5rem;
+
+    }
+
+    .study-plan__content {
+        @include flex(flex-start, center, row);
+        column-gap: 4rem;
+    }
+
+    .study-plan__section-header {
+        font-size: var(--fs-768-36);
+        padding-bottom: 0.83333333em;
+    }
+    
+    .study-plan__description {
+        // margin-right: auto;
+    }
+    
+    .study-plan__main-slogan {
+        font-size: var(--fs-768-18);
+        line-height: 2.5rem;
+        max-width: 48rem;
+        min-width: 20rem; //
+        padding-bottom: 1.11111111em;
+    }
+    
+    .study-plan__text {
+        font-size: var(--fs-768-14);
+        max-width: 48rem;
+        min-width: 28.3rem; // FIX OR REMOVE
+    }
+
+    .study-plan__first-text-block {
+        padding-bottom: 1.5rem;
+    }
+
+    .study-plan__second-text-block {
+        padding-bottom: unset;
+    }
+        
+    .study-plan__video-name {
+        font-size: var(--fs-768-18);
+        line-height: 2.5rem;
+        min-width: 25rem;
+        max-width: 40rem;
+        padding-bottom: 1.3888888em;
+    }
+    
+    .study-plan__video-player {
+    }
+    
+    .study-plan__rocket-image {
+        width: 10.1rem;
+        height: 5rem;
+        top: -24rem;
+        left: 24rem;
+    }
+}
+
+@include media(">=desktop") {
+    .study-plan__wrapper {
+        padding-top: 12rem;
+        padding-bottom: 12.5rem;
+    }
+
+    .study-plan__content {
+        // column-gap: 9rem;
+        @include flex(center, space-between, row);
+        column-gap: unset;
+    }
+
+    .study-plan__section-header {
+        font-size: var(--fs-1366-36);
+        padding-bottom: 1.6666666em;
+    }
+    
+    .study-plan__description {
+        // margin-right: auto;
+    }
+    
+    .study-plan__main-slogan {
+        font-size: var(--fs-1366-20);
+        line-height: 2.8rem;
+        max-width: 41.4rem;
+        padding-bottom: 1em;
+    }
+    
+    .study-plan__text {
+        font-size: var(--fs-1366-16);
+        line-height: 2.3rem;
+        min-width: 41.4rem; // FIX OR REMOVE
+    }
+
+    .study-plan__video-name {
+        font-size: var(--fs-1366-20);
+        line-height: 2.8rem;
+        max-width: 43.1rem;
+        padding-bottom: 1.25em;
+    }
+    
+    .study-plan__video-player {
+    }
+    
+    .study-plan__rocket-image {
+        width: 13.5rem;
+        height: 6.8rem;
+        top: -25.5rem;
+        left: 41rem;
+    }
+
+    .study-plan__girl-image {
+        display: block;
+        position: absolute;
+        top: -9rem;
+        left: -62rem;
+        width: 10.5rem;
+        height: 11.5rem;
+    }
 }

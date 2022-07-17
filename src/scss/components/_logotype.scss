@@ -1,3 +1,11 @@
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px, // remove
+	tablet: 768px,
+	desktop: 1366px
+);
+
 .logotype {
     width: 11.1rem;
     height: 1.7rem;
@@ -5,7 +13,21 @@
 }
 
 .logotype__image {
-    width: 11.1rem;
-    height: 1.7rem;
+    width: inherit;
+    height: inherit;
     fill: none;
+}
+
+@include media(">=tablet") {
+    .logotype {
+        width: 13.2rem;
+        height: 2.1rem;
+    }
+}
+
+@include media(">=desktop") {
+    .logotype {
+        width: 14.3rem;
+        height: 2.3rem;
+    }
 }

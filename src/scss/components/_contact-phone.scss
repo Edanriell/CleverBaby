@@ -1,9 +1,56 @@
+@use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px, // remove
+	tablet: 768px,
+	desktop: 1366px
+);
+
 .contact-phone {
     display: none; // Temporary
 }
-.contact-phone__link {
+
+.contact-phone__link { // remove
 }
-.contact-phone__phone-icon-wrapper {
+
+.contact-phone__phone-icon-wrapper { // remove
 }
-.contact-phone__phone-icon {
+
+.contact-phone__phone-icon { // remove
+}
+
+@include media(">=tablet") {
+    .contact-phone {
+        order: -1;
+        margin-left: auto;
+    }
+
+    .contact-phone__link {
+        color: var(--clr-primary-dark-blue);
+        font-family: var(--ff-normal-500);
+        font-weight: 500;
+        font-size: var(--fs-768-18);
+        line-height: 2.5rem;
+        column-gap: 1rem;
+        @include flex(flex-start, center, row);
+    }
+    
+    .contact-phone__phone-icon-wrapper {
+        width: 1.5rem;
+        height: 1.5rem;
+        // margin-right: 2rem;
+    }
+    
+    .contact-phone__phone-icon {
+        fill: none;
+        width: inherit;
+        height: inherit;
+    }
+}
+
+@include media(">=desktop") {
+    .contact-phone__link {
+        font-size: var(--fs-1366-18);
+    }
 }

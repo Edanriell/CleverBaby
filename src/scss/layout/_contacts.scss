@@ -1,4 +1,13 @@
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1366px
+);
+
 .contacts {
+    position: relative;
     padding-top: 6rem;
     background-color: var(--clr-secondary-snow-white2);
 }
@@ -9,11 +18,43 @@
 }
 
 .contacts__wrapper {
+    position: relative;
 }
 
 .contacts__contacts-table {
+    background-color: var(--clr-accent-light-blue);
+    box-shadow: 0 0.4rem 4rem rgba(217, 217, 217, 0.3);
+    border-radius: 1.2rem 1.2rem 0 0;
 }
 
 .contacts__contacts-map {
     position: relative;
+}
+
+@include media(">=tablet") {
+    .contacts {
+        padding-top: 11rem;
+    }
+    
+    .contacts__section-title {
+        line-height: 4.5rem;
+        padding-bottom: 0.833333333em;
+    }
+}
+
+@include media(">=desktop") {
+    .contacts__contacts-table {
+        background-color: unset;
+        box-shadow: unset;
+        border-radius: unset;
+    }
+
+    .contacts {
+        padding-top: 13rem;
+    }
+
+    .contacts__wrapper {
+        margin-bottom: 7rem;
+        z-index: 1;
+    }
 }
