@@ -2,10 +2,31 @@
 @use "../vendors/include-media" as *;
 
 $breakpoints: (
-	phone: 320px, // remove
+	phone: 320px,
 	tablet: 768px,
 	desktop: 1366px
 );
+
+// Fluid Typography
+$min_width-sectionHeader: 320px;
+$max_width-sectionHeader: 768px;
+$min_font-sectionHeader: 22px;
+$max_font-sectionHeader: 36px;
+
+$min_width-mainSlogan: 320px;
+$max_width-mainSlogan: 768px;
+$min_font-mainSlogan: 16px;
+$max_font-mainSlogan: 18px;
+
+$min_width-text: 320px;
+$max_width-text: 768px;
+$min_font-text: 14px;
+$max_font-text: 14px;
+
+$min_width-videoName: 320px;
+$max_width-videoName: 768px;
+$min_font-videoName: 16px;
+$max_font-videoName: 18px;
 
 .study-plan {
     position: relative;
@@ -22,7 +43,8 @@ $breakpoints: (
 }
 
 .study-plan__section-header {
-    font-size: var(--fs-320-22);
+    // font-size: var(--fs-320-22);
+    @include fluid-type($min_width-sectionHeader, $max_width-sectionHeader, $min_font-sectionHeader, $max_font-sectionHeader);
     padding-bottom: 1.363636em;
 }
 
@@ -34,7 +56,8 @@ $breakpoints: (
 .study-plan__main-slogan {
     font-family: var(--ff-normal-500);
     font-weight: 500;
-    font-size: var(--fs-320-16);
+    // font-size: var(--fs-320-16);
+    @include fluid-type($min_width-mainSlogan, $max_width-mainSlogan, $min_font-mainSlogan, $max_font-mainSlogan);
     line-height: 2.2rem;
     color: var(--clr-primary-dark-blue);
     max-width: max(17.6rem, 100%);
@@ -45,7 +68,8 @@ $breakpoints: (
 .study-plan__text {
     font-family: var(--ff-normal-400);
     color: var(--clr-primary-dark-blue);
-    font-size: var(--fs-320-14);
+    // font-size: var(--fs-320-14);
+    @include fluid-type($min_width-text, $max_width-text, $min_font-text, $max_font-text);
     line-height: 2rem;
     max-width: max(28rem, 100%);
 }
@@ -65,7 +89,8 @@ $breakpoints: (
 .study-plan__video-name {
     font-family: var(--ff-normal-500);
     font-weight: 500;
-    font-size: var(--fs-320-16);
+    // font-size: var(--fs-320-16);
+    @include fluid-type($min_width-videoName, $max_width-videoName, $min_font-videoName, $max_font-videoName);
     line-height: 2.2rem;
     color: var(--clr-primary-dark-blue);
     min-width: 23rem;
@@ -95,7 +120,23 @@ $breakpoints: (
     display: none;
 }
 
-@include media(">=tablet") {    
+@include media(">=tablet") { 
+    // Fluid Typography
+    $min_width-mainSlogan: 768px;
+    $max_width-mainSlogan: 1366px;
+    $min_font-mainSlogan: 18px;
+    $max_font-mainSlogan: 20px;
+
+    $min_width-text: 768px;
+    $max_width-text: 1366px;
+    $min_font-text: 14px;
+    $max_font-text: 16px;
+
+    $min_width-videoName: 768px;
+    $max_width-videoName: 1366px;
+    $min_font-videoName: 18px;
+    $max_font-videoName: 20px;
+
     .study-plan__wrapper {
         padding-top: 10rem;
         padding-bottom: 5.5rem;
@@ -117,7 +158,8 @@ $breakpoints: (
     }
     
     .study-plan__main-slogan {
-        font-size: var(--fs-768-18);
+        // font-size: var(--fs-768-18);
+        @include fluid-type($min_width-mainSlogan, $max_width-mainSlogan, $min_font-mainSlogan, $max_font-mainSlogan);
         line-height: 2.5rem;
         max-width: 48rem;
         min-width: 20rem; //
@@ -125,7 +167,8 @@ $breakpoints: (
     }
     
     .study-plan__text {
-        font-size: var(--fs-768-14);
+        // font-size: var(--fs-768-14);
+        @include fluid-type($min_width-text, $max_width-text, $min_font-text, $max_font-text);
         max-width: 48rem;
         min-width: 28.3rem; // FIX OR REMOVE
     }
@@ -139,7 +182,8 @@ $breakpoints: (
     }
         
     .study-plan__video-name {
-        font-size: var(--fs-768-18);
+        // font-size: var(--fs-768-18);
+        @include fluid-type($min_width-videoName, $max_width-videoName, $min_font-videoName, $max_font-videoName);
         line-height: 2.5rem;
         min-width: 25rem;
         max-width: 40rem;

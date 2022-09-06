@@ -7,6 +7,17 @@ $breakpoints: (
 	desktop: 1366px
 );
 
+// Fluid Typography
+$min_width-dataTitle: 320px;
+$max_width-dataTitle: 768px;
+$min_font-dataTitle: 14px;
+$max_font-dataTitle: 16px;
+
+$min_width-dataDescription: 320px;
+$max_width-dataDescription: 768px;
+$min_font-dataDescription: 16px;
+$max_font-dataDescription: 18px;
+
 .contacts-table {
 }
 
@@ -23,7 +34,8 @@ $breakpoints: (
 }
 
 .contacts-table__data-title {
-    font-size: var(--fs-320-14);
+    // font-size: var(--fs-320-14);
+    @include fluid-type($min_width-dataTitle, $max_width-dataTitle, $min_font-dataTitle, $max_font-dataTitle);
     line-height: 2rem;
     color: var(--clr-primary-dark-blue);
     padding-bottom: 0.35714285em;
@@ -31,6 +43,7 @@ $breakpoints: (
 
 .contacts-table__data-description {
     font-family: var(--ff-normal-500);
+    @include fluid-type($min_width-dataDescription, $max_width-dataDescription, $min_font-dataDescription, $max_font-dataDescription);
     font-weight: 500;
     line-height: 2.2rem;
     color: var(--clr-primary-dark-blue);

@@ -13,9 +13,19 @@ $colors: (
 		"sky-blue": hsl(188, 63%, 73%), //#8DD9E5
 		"light-blue": hsl(204, 45%, 98%), // F7FAFC
 		"pink": hsl(343, 97%, 86%), //#FEB9CC
+		"sea-blue": hsl(227, 23%, 38%),
+		"gray-blue": hsl(223, 21%, 94%),
+		"blue": #004eec,
+		"dark-blue": #0038a7
 	),
 	neutral: (
 		"white": hsl(0, 0%, 100%), //#FFFFFF
-		"gray-blue": hsl(222, 13%, 46%) //#677085
+		"gray-blue": hsl(222, 13%, 46%), //#677085
+		"black": hsl(233, 33%, 10%)
+	),
+	hover: (
+		"yellow": hsl(40, 54%, 64%), //#FFD787
+		"sky-blue": hsl(188, 43%, 65%), //#8DD9E5
+		"pink": hsl(343, 43%, 73%), //#FEB9CC
 	)
 );

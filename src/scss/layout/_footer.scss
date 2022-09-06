@@ -7,6 +7,17 @@ $breakpoints: (
 	desktop: 1366px
 );
 
+// Fluid Typography
+$min_width-copyright: 320px;
+$max_width-copyright: 768px;
+$min_font-copyright: 12px;
+$max_font-copyright: 14px;
+
+$min_width-politics: 320px;
+$max_width-politics: 768px;
+$min_font-politics: 12px;
+$max_font-politics: 14px;
+
 .footer {
     background-color: var(--clr-secondary-snow-white2);
 }
@@ -19,7 +30,8 @@ $breakpoints: (
 }
 
 .footer__copyright {
-    font-size: var(--fs-320-12);
+    // font-size: var(--fs-320-12);
+    @include fluid-type($min_width-copyright, $max_width-copyright, $min_font-copyright, $max_font-copyright);
     color: var(--clr-primary-dark-blue);
     line-height: 1.7rem;
     margin-bottom: 0.83333333em;
@@ -40,7 +52,8 @@ $breakpoints: (
 }
 
 .footer__politics {
-    font-size: var(--fs-320-12);
+    // font-size: var(--fs-320-12);
+    @include fluid-type($min_width-politics, $max_width-politics, $min_font-politics, $max_font-politics);
     color: var(--clr-primary-dark-blue);
     line-height: 1.7rem;
 }
@@ -49,12 +62,24 @@ $breakpoints: (
 }
 
 @include media(">=tablet") {    
+    // Fluid Typography
+    $min_width-copyright: 768px;
+    $max_width-copyright: 1366px;
+    $min_font-copyright: 14px;
+    $max_font-copyright: 16px;
+
+    $min_width-politics: 768px;
+    $max_width-politics: 1366px;
+    $min_font-politics: 14px;
+    $max_font-politics: 16px;
+
     .footer__wrapper {
         @include flex(flex-start, space-between, row);
     }
     
     .footer__copyright {
-        font-size: var(--fs-768-14);
+        // font-size: var(--fs-768-14);
+        @include fluid-type($min_width-copyright, $max_width-copyright, $min_font-copyright, $max_font-copyright);
         line-height: 2rem;
         margin-bottom: unset;
     }
@@ -65,7 +90,8 @@ $breakpoints: (
     }
     
     .footer__politics {
-        font-size: var(--fs-768-14);
+        // font-size: var(--fs-768-14);
+        @include fluid-type($min_width-politics, $max_width-politics, $min_font-politics, $max_font-politics);
         line-height: 2rem;
     }
 }

@@ -379,34 +379,38 @@
 						<div class="burger-navigation__bar"></div>
 						<div class="burger-navigation__bar"></div>
 					</div>
-					<div class="navigation__mobile-navigation mobile-navigation">
-						<ul class="mobile-navigation">
-							<li class="mobile-navigation__menu-item">
-								<a class="mobile-navigation__menu-link" href="#">Методика</a>
-							</li>
-							<li class="mobile-navigation__menu-item">
-								<a class="mobile-navigation__menu-link" href="#">Преподаватели</a>
-							</li>
-							<li class="mobile-navigation__menu-item">
-								<a class="mobile-navigation__menu-link" href="#">Группы</a>
-							</li>
-							<li class="mobile-navigation__menu-item">
-								<a class="mobile-navigation__menu-link" href="#">Отзывы</a>
-							</li>
-							<li class="mobile-navigation__menu-item">
-								<a class="mobile-navigation__menu-link" href="#">Контакты</a>
-							</li>
-						</ul>
-						<address class="mobile-navigation__contact-phone contact-phone">
-							<a class="contact-phone__link" href="tel:+74959834719" aria-label="Номер телефона">
-								<span class="contact-phone__phone-icon-wrapper">
-									<svg class="contact-phone__phone-icon" focusable="false" aria-hidden="true">
-										<use xlink:href="#phone-icon"></use>
-									</svg>
-								</span>
-								+ 7 (495) 983-47-19
-							</a>
-						</address>
+					<div class="navigation__mobile-navigation">
+						<div class="mobile-navigation__underlay">
+							<div class="mobile-navigation__content container">
+								<ul class="mobile-navigation">
+									<li class="mobile-navigation__menu-item">
+										<a class="mobile-navigation__menu-link" href="#">Методика</a>
+									</li>
+									<li class="mobile-navigation__menu-item">
+										<a class="mobile-navigation__menu-link" href="#">Преподаватели</a>
+									</li>
+									<li class="mobile-navigation__menu-item">
+										<a class="mobile-navigation__menu-link" href="#">Группы</a>
+									</li>
+									<li class="mobile-navigation__menu-item">
+										<a class="mobile-navigation__menu-link" href="#">Отзывы</a>
+									</li>
+									<li class="mobile-navigation__menu-item">
+										<a class="mobile-navigation__menu-link" href="#">Контакты</a>
+									</li>
+								</ul>
+								<address class="mobile-navigation__contact-phone contact-phone">
+									<a class="contact-phone__link mobile-navigation__contact-phone-link" href="tel:+74959834719" aria-label="Номер телефона">
+										<span class="contact-phone__phone-icon-wrapper">
+											<svg class="contact-phone__phone-icon" focusable="false" aria-hidden="true">
+												<use xlink:href="#phone-icon"></use>
+											</svg>
+										</span>
+										+ 7 (495) 983-47-19
+									</a>
+								</address>
+							</div>
+						</div>
 					</div>
 				</nav>
 				<address class="main-navigation__contact-phone contact-phone">
@@ -439,7 +443,7 @@
 						Гармоничное развитие детей и обучение через полное погружение в языковую
 						среду
 					</p>
-					<button class="button button--color--yellow button--size--small hero__button" type="button">Записаться</button>
+					<button class="button button--color--yellow button--size--small hero__button" type="button" data-free-lesson-modal-trigger>Записаться</button>
 				</div>
 				<div class="hero__image-wrapper">
 					<svg class="hero__car-image" focusable="false" aria-hidden="true">
@@ -514,9 +518,8 @@
 									<video
 										class="video-player__player"
 										src="./static/video/sample.mp4"
-										poster="./images/video-preview-desktop@1x.png"
 										preload="metadata"
-										controls=""
+										controls
 									></video>
 								</div>
 								<div class="video-player__play-button-wrapper">
@@ -673,7 +676,7 @@
 									</strong>
 									в месяц
 								</p>
-								<button class="button button--color--sky-blue button--size--normal" type="button">Записаться</button>
+								<button class="button button--color--sky-blue button--size--normal" type="button" data-group-list-modal-trigger data-target-group="0">Записаться</button>
 							</article>
 						</li>
 						<li class="group-list__item">
@@ -694,7 +697,7 @@
 									</strong>
 									в месяц
 								</p>
-								<button class="button button--color--yellow button--size--normal" type="button">Записаться</button>
+								<button class="button button--color--yellow button--size--normal" type="button" data-group-list-modal-trigger data-target-group="1">Записаться</button>
 							</article>
 						</li>
 						<li class="group-list__item">
@@ -715,7 +718,7 @@
 									</strong>
 									в месяц
 								</p>
-								<button class="button button--color--pink button--size--normal" type="button">Записаться</button>
+								<button class="button button--color--pink button--size--normal" type="button" data-group-list-modal-trigger data-target-group="2">Записаться</button>
 							</article>
 						</li>
 					</ul>
@@ -735,38 +738,50 @@
 							образование и опыт работы с детьми
 						</p>
 					</header>
-					<div class="teachers__teachers-slider teachers-slider">
-						<div class="teachers-slider__wrapper">
-							<div class="teachers-slider__slide">
+					<div class="teachers__teachers-slider teachers-slider swiper">
+						<div class="teachers-slider__wrapper swiper-wrapper">
+							<div class="teachers-slider__slide swiper-slide">
 								<picture class="teachers-slider__teacher-image-wrapper">
 									<source
 										type="image/webp"
 										media="(min-width:1366px)"
+										width="220"
+										height="219"
 										srcset="./images/first-author-desktop@1x.webp 1x, ./images/first-author-desktop@2x.webp 2x"
 									/>
 									<source
 										type="image/jpg"
 										media="(min-width:1366px)"
+										width="220"
+										height="219"
 										srcset="./images/first-author-desktop@1x.jpg 1x, ./images/first-author-desktop@2x.jpg 2x"
 									/>
 									<source
 										type="image/webp"
 										media="(min-width:768px)"
+										width="206"
+										height="205"
 										srcset="./images/first-author-tablet@1x.webp 1x, ./images/first-author-tablet@2x.webp 2x"
 									/>
 									<source
 										type="image/jpg"
 										media="(min-width:768px)"
+										width="206"
+										height="205"
 										srcset="./images/first-author-tablet@1x.jpg 1x, ./images/first-author-tablet@2x.jpg 2x"
 									/>
 									<source
 										type="image/webp"
 										media="(min-width:320px)"
+										width="290"
+										height="232"
 										srcset="./images/first-author-mobile@1x.webp 1x, ./images/first-author-mobile@2x.webp 2x"
 									/>
 									<source
 										type="image/jpg"
 										media="(min-width:320px)"
+										width="290"
+										height="232"
 										srcset="./images/first-author-mobile@1x.jpg 1x, ./images/first-author-mobile@2x.jpg 2x"
 									/>
 									<img
@@ -778,37 +793,49 @@
 								<strong class="teachers-slider__teacher-name">Kate Smith</strong>
 								<p class="teachers-slider__teacher-home-land">США</p>
 							</div>
-							<div class="teachers-slider__slide">
+							<div class="teachers-slider__slide swiper-slide">
 								<picture class="teachers-slider__teacher-image-wrapper">
 									<source
 										type="image/webp"
 										media="(min-width:1366px)"
+										width="220"
+										height="219"
 										srcset="./images/second-author-desktop@1x.webp 1x, ./images/second-author-desktop@2x.webp 2x"
 									/>
 									<source
 										type="image/jpg"
 										media="(min-width:1366px)"
+										width="220"
+										height="219"
 										srcset="./images/second-author-desktop@1x.jpg 1x, ./images/second-author-desktop@2x.jpg 2x"
 									/>
 									<source
 										type="image/webp"
 										media="(min-width:768px)"
+										width="206"
+										height="205"
 										srcset="./images/second-author-tablet@1x.webp 1x, ./images/second-author-tablet@2x.webp 2x"
 									/>
 									<source
 										type="image/jpg"
 										media="(min-width:768px)"
+										width="206"
+										height="205"
 										srcset="./images/second-author-tablet@1x.jpg 1x, ./images/second-author-tablet@2x.jpg 2x"
 									/>
 									<source
 										type="image/webp"
 										media="(min-width:320px)"
-										srcset="./images/second-author-tablet@1x.webp 1x, ./images/second-author-tablet@2x.webp 2x"
+										width="290"
+										height="232"
+										srcset="./images/second-author-desktop@1x.webp 1x, ./images/second-author-desktop@2x.webp 2x"
 									/>
 									<source
 										type="image/jpg"
 										media="(min-width:320px)"
-										srcset="./images/second-author-tablet@1x.jpg 1x, ./images/second-author-tablet@2x.jpg 2x"
+										width="290"
+										height="232"
+										srcset="./images/second-author-desktop@1x.jpg 1x, ./images/second-author-desktop@2x.jpg 2x"
 									/>
 									<img
 										class="teachers-slider__teacher-image"
@@ -819,37 +846,49 @@
 								<strong class="teachers-slider__teacher-name">Samuel King</strong>
 								<p class="teachers-slider__teacher-home-land">США</p>
 							</div>
-							<div class="teachers-slider__slide">
+							<div class="teachers-slider__slide swiper-slide">
 								<picture class="teachers-slider__teacher-image-wrapper">
 									<source
 										type="image/webp"
 										media="(min-width:1366px)"
+										width="220"
+										height="219"
 										srcset="./images/third-author-desktop@1x.webp 1x, ./images/third-author-desktop@2x.webp 2x"
 									/>
 									<source
 										type="image/jpg"
 										media="(min-width:1366px)"
+										width="220"
+										height="219"
 										srcset="./images/third-author-desktop@1x.jpg 1x, ./images/third-author-desktop@2x.jpg 2x"
 									/>
 									<source
 										type="image/webp"
 										media="(min-width:768px)"
+										width="206"
+										height="205"
 										srcset="./images/third-author-tablet@1x.webp 1x, ./images/third-author-tablet@2x.webp 2x"
 									/>
 									<source
 										type="image/jpg"
 										media="(min-width:768px)"
+										width="206"
+										height="205"
 										srcset="./images/third-author-tablet@1x.jpg 1x, ./images/third-author-tablet@2x.jpg 2x"
 									/>
 									<source
 										type="image/webp"
 										media="(min-width:320px)"
-										srcset="./images/third-author-tablet@1x.webp 1x, ./images/third-author-tablet@2x.webp 2x"
+										width="290"
+										height="232"
+										srcset="./images/third-author-desktop@1x.webp 1x, ./images/third-author-desktop@2x.webp 2x"
 									/>
 									<source
 										type="image/jpg"
 										media="(min-width:320px)"
-										srcset="./images/third-author-tablet@1x.jpg 1x, ./images/third-author-tablet@2x.jpg 2x"
+										width="290"
+										height="232"
+										srcset="./images/third-author-desktop@1x.jpg 1x, ./images/third-author-desktop@2x.jpg 2x"
 									/>
 									<img
 										class="teachers-slider__teacher-image"
@@ -860,36 +899,155 @@
 								<strong class="teachers-slider__teacher-name">Nikole Young</strong>
 								<p class="teachers-slider__teacher-home-land">Канада</p>
 							</div>
-							<div class="teachers-slider__slide">
+							<div class="teachers-slider__slide swiper-slide">
 								<picture class="teachers-slider__teacher-image-wrapper">
 									<source
 										type="image/webp"
 										media="(min-width:1366px)"
+										width="220"
+										height="219"
 										srcset="./images/fourth-author-desktop@1x.webp 1x, ./images/fourth-author-desktop@2x.webp 2x"
 									/>
 									<source
 										type="image/jpg"
 										media="(min-width:1366px)"
+										width="220"
+										height="219"
 										srcset="./images/fourth-author-desktop@1x.jpg 1x, ./images/fourth-author-desktop@2x.jpg 2x"
 									/>
 									<source
 										type="image/webp"
 										media="(min-width:768px)"
+										width="206"
+										height="205"
 										srcset="./images/fourth-author-desktop@1x.webp 1x, ./images/fourth-author-desktop@2x.webp 2x"
 									/>
 									<source
 										type="image/jpg"
 										media="(min-width:768px)"
+										width="206"
+										height="205"
 										srcset="./images/fourth-author-desktop@1x.jpg 1x, ./images/fourth-author-desktop@2x.jpg 2x"
 									/>
 									<source
 										type="image/webp"
 										media="(min-width:320px)"
+										width="290"
+										height="232"
 										srcset="./images/fourth-author-desktop@1x.webp 1x, ./images/fourth-author-desktop@2x.webp 2x"
 									/>
 									<source
 										type="image/jpg"
 										media="(min-width:320px)"
+										width="290"
+										height="232"
+										srcset="./images/fourth-author-desktop@1x.jpg 1x, ./images/fourth-author-desktop@2x.jpg 2x"
+									/>
+									<img
+										class="teachers-slider__teacher-image"
+										src="./images/fourth-author-desktop@1x.jpg"
+										alt="Фотография Kate Smith"
+									/>
+								</picture>
+								<strong class="teachers-slider__teacher-name">Karoline Bush</strong>
+								<p class="teachers-slider__teacher-home-land">Канада</p>
+							</div>
+
+							<div class="teachers-slider__slide swiper-slide">
+								<picture class="teachers-slider__teacher-image-wrapper">
+									<source
+										type="image/webp"
+										media="(min-width:1366px)"
+										width="220"
+										height="219"
+										srcset="./images/fourth-author-desktop@1x.webp 1x, ./images/fourth-author-desktop@2x.webp 2x"
+									/>
+									<source
+										type="image/jpg"
+										media="(min-width:1366px)"
+										width="220"
+										height="219"
+										srcset="./images/fourth-author-desktop@1x.jpg 1x, ./images/fourth-author-desktop@2x.jpg 2x"
+									/>
+									<source
+										type="image/webp"
+										media="(min-width:768px)"
+										width="206"
+										height="205"
+										srcset="./images/fourth-author-desktop@1x.webp 1x, ./images/fourth-author-desktop@2x.webp 2x"
+									/>
+									<source
+										type="image/jpg"
+										media="(min-width:768px)"
+										width="206"
+										height="205"
+										srcset="./images/fourth-author-desktop@1x.jpg 1x, ./images/fourth-author-desktop@2x.jpg 2x"
+									/>
+									<source
+										type="image/webp"
+										media="(min-width:320px)"
+										width="290"
+										height="232"
+										srcset="./images/fourth-author-desktop@1x.webp 1x, ./images/fourth-author-desktop@2x.webp 2x"
+									/>
+									<source
+										type="image/jpg"
+										media="(min-width:320px)"
+										width="290"
+										height="232"
+										srcset="./images/fourth-author-desktop@1x.jpg 1x, ./images/fourth-author-desktop@2x.jpg 2x"
+									/>
+									<img
+										class="teachers-slider__teacher-image"
+										src="./images/fourth-author-desktop@1x.jpg"
+										alt="Фотография Kate Smith"
+									/>
+								</picture>
+								<strong class="teachers-slider__teacher-name">Karoline Bush</strong>
+								<p class="teachers-slider__teacher-home-land">Канада</p>
+							</div>
+							<div class="teachers-slider__slide swiper-slide">
+								<picture class="teachers-slider__teacher-image-wrapper">
+									<source
+										type="image/webp"
+										media="(min-width:1366px)"
+										width="220"
+										height="219"
+										srcset="./images/fourth-author-desktop@1x.webp 1x, ./images/fourth-author-desktop@2x.webp 2x"
+									/>
+									<source
+										type="image/jpg"
+										media="(min-width:1366px)"
+										width="220"
+										height="219"
+										srcset="./images/fourth-author-desktop@1x.jpg 1x, ./images/fourth-author-desktop@2x.jpg 2x"
+									/>
+									<source
+										type="image/webp"
+										media="(min-width:768px)"
+										width="206"
+										height="205"
+										srcset="./images/fourth-author-desktop@1x.webp 1x, ./images/fourth-author-desktop@2x.webp 2x"
+									/>
+									<source
+										type="image/jpg"
+										media="(min-width:768px)"
+										width="206"
+										height="205"
+										srcset="./images/fourth-author-desktop@1x.jpg 1x, ./images/fourth-author-desktop@2x.jpg 2x"
+									/>
+									<source
+										type="image/webp"
+										media="(min-width:320px)"
+										width="290"
+										height="232"
+										srcset="./images/fourth-author-desktop@1x.webp 1x, ./images/fourth-author-desktop@2x.webp 2x"
+									/>
+									<source
+										type="image/jpg"
+										media="(min-width:320px)"
+										width="290"
+										height="232"
 										srcset="./images/fourth-author-desktop@1x.jpg 1x, ./images/fourth-author-desktop@2x.jpg 2x"
 									/>
 									<img
@@ -934,7 +1092,7 @@
 						Приходите к нам в гости и мы познакомим вас с педагогами, расскажем о школе
 						и ответим на все ваши вопросы
 					</p>
-					<button class="button button--color--yellow button--size--normal" type="button">Записаться</button>
+					<button class="button button--color--yellow button--size--normal" type="button" data-free-lesson-modal-trigger>Записаться</button>
 				</div>
 				<div class="trial-lesson__image-wrapper">
 					<svg class="trial-lesson__rainbow-image" focusable="false" aria-hidden="true">
@@ -1043,5 +1201,204 @@
 				</small>
 			</div>
 		</footer>
+		<div class="modal__underlay" data-free-lesson-modal-underlay>
+			<div class="modal" data-free-lesson-modal>
+				<header class="modal__header">
+					<h2 class="modal__title">Бесплатное пробное занятие</h2>
+					<p class="modal__subtitle">Запишитесь прямо сейчас</p>
+				</header>
+				<div class="modal__content">
+					<form class="modal__modal-form modal-form" action="#" method="POST" data-free-lesson-form>
+						<div class="modal-form__field">
+							<p class="modal-form__field-name">Ваше имя и фамилия</p>
+							<label class="modal-form__name-surname-label" for="name-surname">
+								<span class="visually-hidden">Ваше имя и фамилия</span>
+							</label>
+							<input
+								class="modal-form__name-surname-input"
+								type="text"
+								name="name-surname"
+								id="name-surname"
+								placeholder="Андрей Фомин"
+								required
+								data-free-lesson-form-input-name-surname
+							/>
+						</div>
+						<div class="modal-form__field">
+							<p class="modal-form__field-name">Ваши контактные данные</p>
+							<div class="modal-form__subfield">
+								<label class="modal-form__phone-number-label" for="phone-number">
+									<span class="visually-hidden">Ваш мобильный телефон</span>
+								</label>
+								<input
+									class="modal-form__phone-number-input"
+									type="text"
+									name="phone-number"
+									id="phone-number"
+									placeholder="+371 28202040"
+									required
+									data-free-lesson-form-input-number
+								/>
+							</div>
+							<div class="modal-form__subfield">
+								<label class="modal-form__email-label" for="email">
+									<span class="visually-hidden">Ваша электронная почта</span>
+								</label>
+								<input
+									class="modal-form__email-input"
+									type="text"
+									name="email"
+									id="email"
+									placeholder="myEmail@gmail.com"
+									required
+									data-free-lesson-form-input-email
+								/>
+							</div>
+						</div>
+						<div class="modal__footer">
+							<button class="modal__cancel-button" type="button" data-free-lesson-modal-close>Отмена</button>
+							<button class="modal__send-data-button" type="submit" data-free-lesson-submit-button><span>Отправить данные</span></button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="modal__underlay" data-group-list-modal-underlay>
+			<div class="modal" data-group-list-modal>
+				<header class="modal__header">
+					<h2 class="modal__title">Бесплатное пробное занятие</h2>
+					<p class="modal__subtitle">Запишитесь прямо сейчас</p>
+				</header>
+				<div class="modal__content">
+					<form class="modal__modal-form modal-form" action="#" method="POST" data-group-list-form>
+						<div class="modal-form__field">
+							<p class="modal-form__field-name">Ваше имя и фамилия</p>
+							<label class="modal-form__name-surname-label" for="name-surname">
+								<span class="visually-hidden">Ваше имя и фамилия</span>
+							</label>
+							<input
+								class="modal-form__name-surname-input"
+								type="text"
+								name="name-surname"
+								id="name-surname"
+								placeholder="Андрей Фомин"
+								required
+								data-group-list-form-input-name-surname
+							/>
+						</div>
+						<div class="modal-form__field">
+							<p class="modal-form__field-name">Ваши контактные данные</p>
+							<div class="modal-form__subfield">
+								<label class="modal-form__phone-number-label" for="phone-number">
+									<span class="visually-hidden">Ваш мобильный телефон</span>
+								</label>
+								<input
+									class="modal-form__phone-number-input"
+									type="text"
+									name="phone-number"
+									id="phone-number"
+									placeholder="+371 28202040"
+									required
+									data-group-list-form-input-number
+								/>
+							</div>
+							<div class="modal-form__subfield">
+								<label class="modal-form__email-label" for="email">
+									<span class="visually-hidden">Ваша электронная почта</span>
+								</label>
+								<input
+									class="modal-form__email-input"
+									type="text"
+									name="email"
+									id="email"
+									placeholder="myEmail@gmail.com"
+									required
+									data-group-list-form-input-email
+								/>
+							</div>
+						</div>
+						<div class="modal-form__field">
+							<p class="modal-form__field-name">Выберете группу</p>
+							<div class="modal-form__cards-list">
+								<div class="modal-form__subfield--type--card">
+									<label class="modal-form__phone-number-label" for="group1">
+										<span class="visually-hidden">Бэбики-1</span>
+									</label>
+									<div class="modal-form__card-content">
+										<h3 class="group-card__title modal-form__card-title">Бэбики-1</h3>
+										<ul class="group-card__lesson-schedule modal-form__card-lesson-schedule">
+											<li class="group-card__number-of-lessons modal-form__card-number-of-lessons">1 раз в неделю</li>
+											<li class="group-card__lesson-length modal-form__card-lesson-length">1,5 часа занятие</li>
+										</ul> 
+										<p class="group-card__full-price modal-form__card-full-price">
+											<strong class="group-card__price modal-form__card-price">2500<span class="group-card__ruble-sign-wrapper"><svg class="group-card__ruble-sign modal-form__card-ruble-sign" focusable="false" aria-hidden="true"><use xlink:href="#ruble-icon"></use> </svg> </span> </strong> в месяц 
+										</p>
+									</div>
+									<input
+										class="modal-form__card modal-form__card--color--blue"
+										type="checkbox"
+										name="group1"
+										value="group1"
+										id="group1"
+										data-modal-form-card-input
+									/>
+								</div>
+								<div class="modal-form__subfield--type--card">
+									<label class="modal-form__email-label" for="group2">
+										<span class="visually-hidden">Бэбики-2</span>
+									</label>
+									<div class="modal-form__card-content">
+										<h3 class="group-card__title modal-form__card-title">Бэбики-2</h3>
+										<ul class="group-card__lesson-schedule modal-form__card-lesson-schedule">
+											<li class="group-card__number-of-lessons modal-form__card-number-of-lessons">2 раза в неделю</li>
+											<li class="group-card__lesson-length modal-form__card-lesson-length">1,5 часа занятие</li>
+										</ul> 
+										<p class="group-card__full-price modal-form__card-full-price">
+											<strong class="group-card__price modal-form__card-price">4000<span class="group-card__ruble-sign-wrapper"><svg class="group-card__ruble-sign modal-form__card-ruble-sign" focusable="false" aria-hidden="true"><use xlink:href="#ruble-icon"></use> </svg> </span> </strong> в месяц 
+										</p>
+									</div>
+									<input
+										class="modal-form__card modal-form__card--color--yellow"
+										type="checkbox"
+										name="group2"
+										value="group2"
+										id="group2"
+										data-modal-form-card-input
+									/>
+								</div>
+								<div class="modal-form__subfield--type--card">
+									<label class="modal-form__email-label" for="group3">
+										<span class="visually-hidden">Бэбики-3</span>
+									</label>
+									<div class="modal-form__card-content">
+										<h3 class="group-card__title modal-form__card-title">Бэбики-3</h3>
+										<ul class="group-card__lesson-schedule modal-form__card-lesson-schedule">
+											<li class="group-card__number-of-lessons modal-form__card-number-of-lessons">3 раза в неделю</li>
+											<li class="group-card__lesson-length modal-form__card-lesson-length">1 час занятие</li>
+										</ul> 
+										<p class="group-card__full-price modal-form__card-full-price">
+											<strong class="group-card__price modal-form__card-price">5000<span class="group-card__ruble-sign-wrapper"><svg class="group-card__ruble-sign modal-form__card-ruble-sign" focusable="false" aria-hidden="true"><use xlink:href="#ruble-icon"></use> </svg> </span> </strong> в месяц 
+										</p>
+									</div>
+									<input
+										class="modal-form__card modal-form__card--color--pink"
+										type="checkbox"
+										name="group3"
+										value="group3"
+										id="group3"
+										data-modal-form-card-input
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="modal__footer">
+							<button class="modal__cancel-button" type="button" data-group-list-modal-close>Отмена</button>
+							<button class="modal__send-data-button" type="submit" data-group-list-submit-button><span>Отправить данные</span></button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="notifications-container"></div>
 	</body>
 </html>

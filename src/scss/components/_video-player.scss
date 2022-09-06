@@ -2,7 +2,7 @@
 @use "../vendors/include-media" as *;
 
 $breakpoints: (
-	phone: 320px, // remove
+	phone: 320px,
 	tablet: 768px,
 	desktop: 1366px
 );
@@ -36,6 +36,7 @@ $breakpoints: (
     width: inherit;
     height: inherit;
     border-radius: inherit;
+    object-fit: cover;
     z-index: -1;
 }
 
@@ -43,7 +44,10 @@ $breakpoints: (
     position: relative;
     width: 29rem;
     height: 26.2rem;
-    border-radius: 1.2rem;
+    // border-radius: 1.2rem;
+    border-radius: 20px; 
+    overflow: hidden;
+    transform: translateZ(0);
 }
 
 .video-player__play-button-wrapper {
@@ -60,6 +64,7 @@ $breakpoints: (
     border-radius: 50%;
     background-color: var(--clr-accent-bright-yellow);
     cursor: pointer;
+    transition: background-color 0.6s ease;
 }
 
 .video-player__play-button::after {
@@ -86,6 +91,16 @@ $breakpoints: (
     border-top: 8.5px solid transparent;
     border-left: 12px solid var(--clr-secondary-snow-white);
     border-bottom: 8.5px solid transparent;
+}
+
+.video-player__play-button:hover {
+    background-color: hsl(43, 69%, 58%);
+    transition: background-color 0.3s ease;
+}
+
+.video-player__play-button:focus {
+    background-color: hsl(43, 69%, 58%);
+    transition: background-color 0.3s ease;
 }
 
 @include media(">=tablet") {        

@@ -2,10 +2,16 @@
 @use "../vendors/include-media" as *;
 
 $breakpoints: (
-	phone: 320px, // 
+	phone: 320px,
 	tablet: 768px,
 	desktop: 1366px
 );
+
+// Fluid Typography
+$min_width-pricingTitle: 320px;
+$max_width-pricingTitle: 768px;
+$min_font-pricingTitle: 22px;
+$max_font-pricingTitle: 36px;
 
 .pricing {
     position: relative;
@@ -17,8 +23,9 @@ $breakpoints: (
     padding-top: 6rem;
 }
 
-.pricing__title{
-    font-size: var(--fs-320-22);
+.pricing__title {
+    // font-size: var(--fs-320-22);
+    @include fluid-type($min_width-pricingTitle, $max_width-pricingTitle, $min_font-pricingTitle, $max_font-pricingTitle);
     line-height: 3.08rem;
     padding-bottom: 0.9090909em;
 }
@@ -92,8 +99,8 @@ $breakpoints: (
 @include media(">=desktop") {
     .pricing {
         background-image: url("../images/pricing-background-desktop.png");
-        background-repeat: no-repeat; //
-        // background-size: 100% auto; //
+        background-repeat: no-repeat;
+        // background-size: 100% auto;
         background-size: cover;
     }
     

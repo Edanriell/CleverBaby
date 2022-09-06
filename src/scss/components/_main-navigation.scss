@@ -2,47 +2,73 @@
 @use "../vendors/include-media" as *;
 
 $breakpoints: (
-	phone: 320px, // remove
+	phone: 320px,
 	tablet: 768px,
 	desktop: 1366px
 );
 
+// Fluid Typography
+$min_width-mainNav: 1366px;
+$max_width-mainNav: 1920px;
+$min_font-mainNav: 16px;
+$max_font-mainNav: 18px;
+
 .main-navigation {
-    display: none; // Temporary
-}
-
-.main-navigation__menu-item { // remove here
-}
-
-.main-navigation__menu-link { // remove here
-}
-
-.main-navigation__contact-phone { // remove here
+	display: none;
 }
 
 @include media(">=tablet") {
-    .main-navigation__contact-phone {
-        display: block;
-    }
+	.main-navigation__contact-phone {
+		display: block;
+	}
 }
 
 @include media(">=desktop") {
-    .main-navigation {
-        margin-left: 6rem;
-        column-gap: 2rem;
-        @include flex(flex-start, flex-start, row);
-    }
-    
-    .main-navigation__menu-item {
-    }
-    
-    .main-navigation__menu-link {
-        font-size: var(--fs-1366-16);
-        line-height: 2.2rem;
-        color: var(--clr-primary-dark-blue);
-    }
-    
-    .main-navigation__contact-phone {
-        order: -2;
-    }
+	.main-navigation {
+		margin-left: 6rem;
+		column-gap: 2rem;
+		@include flex(flex-start, flex-start, row);
+	}
+
+	.main-navigation__menu-link {
+		position: relative;
+		// font-size: var(--fs-1366-16);
+		@include fluid-type($min_width-mainNav, $max_width-mainNav, $min_font-mainNav, $max_font-mainNav);
+		line-height: 2.2rem;
+		color: var(--clr-primary-dark-blue);
+	}
+
+	.main-navigation__menu-link::before {
+		content: "[";
+		position: absolute;
+		top: -8%;
+        left: -1rem;
+        transform: translateX(2rem);
+	}
+
+	.main-navigation__menu-link::after {
+		content: "]";
+		position: absolute;
+		top: -8%;
+        right: -1rem;
+		transform: translateX(-2rem);
+	}
+
+	.main-navigation__menu-link::before,
+	.main-navigation__menu-link::after {
+		opacity: 0;
+		transition: transform 0.3s, opacity 0.2s;
+	}
+
+	.main-navigation__menu-link:hover::before,
+	.main-navigation__menu-link:hover::after,
+	.main-navigation__menu-link:focus::before,
+	.main-navigation__menu-link:focus::after {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+
+	.main-navigation__contact-phone {
+		order: -2;
+	}
 }

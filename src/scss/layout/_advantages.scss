@@ -2,10 +2,21 @@
 @use "../vendors/include-media" as *;
 
 $breakpoints: (
-	phone: 320px, // remove
+	phone: 320px,
 	tablet: 768px,
 	desktop: 1366px
 );
+
+// Fluid Typography
+$min_width-listItemTitle: 320px;
+$max_width-listItemTitle: 768px;
+$min_font-listItemTitle: 16px;
+$max_font-listItemTitle: 18px;
+
+$min_width-listItemDescription: 320px;
+$max_width-listItemDescription: 768px;
+$min_font-listItemDescription: 14px;
+$max_font-listItemDescription: 14px;
 
 .advantages {
     background-color: var(--clr-secondary-snow-white2);
@@ -24,7 +35,7 @@ $breakpoints: (
 .advantages__list-item {
     grid-column: 2;
     justify-self: center;
-    max-width: 32.7rem; // try to change latter
+    max-width: 32.7rem;
 }
 
 .advantages__list-item:nth-child(1) {
@@ -55,13 +66,15 @@ $breakpoints: (
     color: var(--clr-primary-dark-blue);
     font-family: var(--ff-normal-500);
     font-weight: 500;
-    font-size: var(--fs-320-16);
+    // font-size: var(--fs-320-16);
+    @include fluid-type($min_width-listItemTitle, $max_width-listItemTitle, $min_font-listItemTitle, $max_font-listItemTitle);
     line-height: 2.2rem;
     padding-bottom: 0.3125em;
 }
 
 .advantages__list-item-description {
-    font-size: var(--fs-320-14);
+    // font-size: var(--fs-320-14);
+    @include fluid-type($min_width-listItemDescription, $max_width-listItemDescription, $min_font-listItemDescription, $max_font-listItemDescription);
     line-height: 2rem;
     color: var(--clr-primary-dark-blue);
 }
@@ -138,6 +151,17 @@ $breakpoints: (
 }
 
 @include media(">=tablet") {    
+    // Fluid Typography
+    $min_width-listItemTitle: 768px;
+    $max_width-listItemTitle: 1366px;
+    $min_font-listItemTitle: 18px;
+    $max_font-listItemTitle: 20px;
+
+    $min_width-listItemDescription: 768px;
+    $max_width-listItemDescription: 1366px;
+    $min_font-listItemDescription: 14px;
+    $max_font-listItemDescription: 16px;
+
     .advantages {
         padding-bottom: 10.5rem;
     }
@@ -150,7 +174,7 @@ $breakpoints: (
         justify-content: center;
         position: relative;
         display: grid;
-        grid-template-columns: max(29rem, 30%) max(16.6rem, 20%) max(21.5rem, 24%); // second column need to fix
+        grid-template-columns: max(29rem, 30%) max(16.6rem, 20%) max(21.5rem, 24%);
         grid-template-rows: 3.5rem 5.3rem 3.5rem 6.5rem 5.8rem 5.1rem 5.7rem;
         grid-template-areas: 
             ". . item2"
@@ -211,12 +235,14 @@ $breakpoints: (
 
     .advantages__list-item-title {
         font-size: var(--fs-768-18);
+        // @include fluid-type($min_width-listItemTitle, $max_width-listItemTitle, $min_font-listItemTitle, $max_font-listItemTitle);
         line-height: 2.5rem;
         padding-bottom: 0.2777777em;
     }
     
     .advantages__list-item-description {
         font-size: var(--fs-768-14);
+        // @include fluid-type($min_width-listItemDescription, $max_width-listItemDescription, $min_font-listItemDescription, $max_font-listItemDescription);
     }
     
     .advantages__list-item-picture-arrow1--size--tablet {

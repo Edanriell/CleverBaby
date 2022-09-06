@@ -7,7 +7,7 @@
 		"start": "cross-env NODE_ENV=development webpack serve",
 		"dev": "cross-env NODE_ENV=development webpack",
 		"build": "cross-env NODE_ENV=production webpack",
-		"testscss": "npx stylelint **/*.scss",
+		"checkscss": "npx stylelint **/*.scss",
 		"checktypes": "npx type-coverage --detail"
 	},
 	"keywords": [
@@ -70,6 +70,8 @@
 		"webpack-dev-server": "^4.9.2"
 	},
 	"dependencies": {
-		"postcss-preset-env": "^7.7.2"
+		"gsap": "^3.10.4",
+		"postcss-preset-env": "^7.7.2",
+		"swiper": "^8.3.1"
 	}
 }

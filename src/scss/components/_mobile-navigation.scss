@@ -1,9 +1,123 @@
+@use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1366px
+);
+
+// Fluid Typography
+$min_width-mobileNav: 320px;
+$max_width-mobileNav: 768px;
+$min_font-mobileNav: 18px;
+$max_font-mobileNav: 22px;
+
 .mobile-navigation {
-    display: none; // Temporary
+    display: block; // Temporary
 }
+
+.mobile-navigation__underlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: none;
+}
+
+.mobile-navigation__content {
+    position: relative;
+    background-color: var(--clr-secondary-snow-white2);
+    z-index: 2;
+    padding-top: 7.5rem;
+    padding-bottom: 3.5rem;
+    display: none;
+}
+
 .mobile-navigation__menu-item {
+    // font-size: var(--fs-320-18);
+    @include fluid-type($min_width-mobileNav, $max_width-mobileNav, $min_font-mobileNav, $max_font-mobileNav);
+    margin-bottom: 0.83333333em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
+
 .mobile-navigation__menu-link {
+    font-family: var(--ff-normal-500);
+    font-weight: 500;
+    color: var(--clr-primary-dark-blue);
+    line-height: 2.5rem;
+    font-size: inherit;
+    position: relative;
 }
+
+.mobile-navigation__menu-link::before {
+    content: "[";
+    position: absolute;
+    top: -8%;
+    left: -1rem;
+    transform: translateX(2rem);
+}
+
+.mobile-navigation__menu-link::after {
+    content: "]";
+    position: absolute;
+    top: -8%;
+    right: -1rem;
+    transform: translateX(-2rem);
+}
+
+.mobile-navigation__menu-link::before,
+.mobile-navigation__menu-link::after {
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+.mobile-navigation__menu-link:hover::before,
+.mobile-navigation__menu-link:hover::after,
+.mobile-navigation__menu-link:focus::before,
+.mobile-navigation__menu-link:focus::after {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
 .mobile-navigation__contact-phone {
+    display: block;
+    font-size: var(--fs-320-18);
+    margin-top: 1.3888888em;
+}
+
+@include media(">=tablet") {    
+    .mobile-navigation__content {
+        background-color: var(--clr-neutral-white);
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+    }
+    
+    .mobile-navigation__menu-item {
+        font-size: var(--fs-768-22);
+        margin-bottom: 0.68181818em;
+    
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    
+    .mobile-navigation__menu-link {
+        line-height: 3.1rem;
+    }
+
+    .mobile-navigation__contact-phone {
+        font-size: var(--fs-768-18);
+        margin-top: 1.3888888em;
+    }
+
+    .mobile-navigation__contact-phone-link {
+        justify-content: flex-start;
+    }
 }

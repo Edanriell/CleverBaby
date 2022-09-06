@@ -1,16 +1,13 @@
 @use "../vendors/include-media" as *;
 
 $breakpoints: (
-	phone: 320px, // remove
+	phone: 320px,
 	tablet: 768px,
 	desktop: 1366px
 );
 
-.navigation {
-}
-
 .navigation__main-navigation {
-    display: none; // Temporary
+    display: none;
 }
 
 .navigation__burger-navigation {
@@ -18,7 +15,8 @@ $breakpoints: (
 }
 
 .navigation__mobile-navigation {
-    display: none; // Temporary
+    display: block; // change
+    // was none when wrapper wasnt
 }
 
 @include media(">=tablet") {
@@ -37,6 +35,10 @@ $breakpoints: (
     }
     
     .navigation__burger-navigation {
+        display: none;
+    }
+
+    .navigation__mobile-navigation {
         display: none;
     }
 }

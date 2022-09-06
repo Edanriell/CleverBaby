@@ -1,7 +1,7 @@
 @use "../vendors/include-media" as *;
 
 $breakpoints: (
-	phone: 320px, // remove
+	phone: 320px,
 	tablet: 768px,
 	desktop: 1366px
 );
@@ -21,16 +21,43 @@ $breakpoints: (
 .button--color--yellow {
     background-color: var(--clr-accent-yellow);
     border-radius: 3.5rem;
+    transition: filter 0.3s ease;
+}
+
+.button--color--yellow:hover {
+    filter: brightness(95%);
+}
+
+.button--color--yellow:focus {
+    filter: brightness(95%);
 }
 
 .button--color--sky-blue {
     background-color: var(--clr-accent-sky-blue);
     border-radius: 3.5rem;
+    transition: filter 0.3s ease;
+}
+
+.button--color--sky-blue:hover {
+    filter: brightness(95%);
+}
+
+.button--color--sky-blue:focus {
+    filter: brightness(95%);
 }
 
 .button--color--pink {
     background-color: var(--clr-accent-pink);
     border-radius: 3.5rem;
+    transition: filter 0.3s ease;
+}
+
+.button--color--pink:hover {
+    filter: brightness(95%);
+}
+
+.button--color--pink:focus {
+    filter: brightness(95%);
 }
 
 .button--size--small {

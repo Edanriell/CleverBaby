@@ -2,10 +2,21 @@
 @use "../vendors/include-media" as *;
 
 $breakpoints: (
-	phone: 320px, // remove
+	phone: 320px,
 	tablet: 768px,
 	desktop: 1366px
 );
+
+// Fluid Typography
+$min_width-headerTitle: 320px;
+$max_width-headerTitle: 768px;
+$min_font-headerTitle: 22px;
+$max_font-headerTitle: 36px;
+
+$min_width-headerText: 320px;
+$max_width-headerText: 768px;
+$min_font-headerText: 14px;
+$max_font-headerText: 14px;
 
 .section-header {
     font-family: var(--ff-normal-500b);
@@ -18,7 +29,8 @@ $breakpoints: (
 }
 
 .section-header__title {
-    font-size: var(--fs-320-22);
+    // font-size: var(--fs-320-22);
+    @include fluid-type($min_width-headerTitle, $max_width-headerTitle, $min_font-headerTitle, $max_font-headerTitle);
     line-height: 3.1rem;
 }
 
@@ -27,11 +39,18 @@ $breakpoints: (
     font-family: var(--ff-normal-400);
     font-weight: 400;
     line-height: 2.03rem;
-    font-size: var(--fs-320-14);
+    // font-size: var(--fs-320-14);
+    @include fluid-type($min_width-headerText, $max_width-headerText, $min_font-headerText, $max_font-headerText);
     padding-bottom: 2.50em;
 }
 
 @include media(">=tablet") {    
+    // Fluid Typography
+    $min_width-headerText: 768px;
+    $max_width-headerText: 1366px;
+    $min_font-headerText: 14px;
+    $max_font-headerText: 16px;
+
     .section-header--layout--two-columns {
         @include flex(flex-start, space-between, row);
     }
@@ -52,7 +71,8 @@ $breakpoints: (
 
     .section-header__text {
         line-height: 2rem;
-        font-size: var(--fs-768-14);
+        // font-size: var(--fs-768-14);
+        @include fluid-type($min_width-headerText, $max_width-headerText, $min_font-headerText, $max_font-headerText);
         padding-bottom: unset;
         max-width: 26.3rem;
     }

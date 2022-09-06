@@ -1,10 +1,12 @@
 @use "../abstracts/mixins" as *;
 
 .burger-navigation {
+    position: relative;
     width: 2.4rem;
-    height: 1.4rem; // possibly fix
+    height: 1.4rem;
     cursor: pointer;
     @include flex(center, space-between, column);
+    z-index: 100;
 }
 
 .burger-navigation__bar {

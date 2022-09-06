@@ -1,10 +1,22 @@
 @use "../vendors/include-media" as *;
+@use "../abstracts/mixins" as *;
 
 $breakpoints: (
-	phone: 320px, //
+	phone: 320px,
 	tablet: 768px,
 	desktop: 1366px
 );
+
+// Fluid Typography
+$min_width-tlSectionTitle: 320px;
+$max_width-tlSectionTitle: 768px;
+$min_font-tlSectionTitle: 22px;
+$max_font-tlSectionTitle: 36px;
+
+$min_width-tlSectionText: 320px;
+$max_width-tlSectionText: 768px;
+$min_font-tlSectionText: 14px;
+$max_font-tlSectionText: 14px;
 
 .trial-lesson {
     position: relative;
@@ -22,7 +34,8 @@ $breakpoints: (
 .trial-lesson__section-title {
     font-family: var(--ff-normal-500b);
     font-weight: 500;
-    font-size: var(--fs-320-22);
+    // font-size: var(--fs-320-22);
+    @include fluid-type($min_width-tlSectionTitle, $max_width-tlSectionTitle, $min_font-tlSectionTitle, $max_font-tlSectionTitle);
     line-height: 2.8rem;
     color: var(--clr-secondary-snow-white2);
     text-align: center;
@@ -30,7 +43,8 @@ $breakpoints: (
 }
 
 .trial-lesson__section-text {
-    font-size: var(--fs-320-14);
+    // font-size: var(--fs-320-14);
+    @include fluid-type($min_width-tlSectionText, $max_width-tlSectionText, $min_font-tlSectionText, $max_font-tlSectionText);
     color: var(--clr-secondary-snow-white2);
     line-height: 2rem;
     text-align: center;
@@ -46,6 +60,12 @@ $breakpoints: (
 }
 
 @include media(">=tablet") {
+    // Fluid Typography
+    $min_width-tlSectionText: 768px;
+    $max_width-tlSectionText: 1366px;
+    $min_font-tlSectionText: 14px;
+    $max_font-tlSectionText: 16px;
+
     .trial-lesson {
         background-image: url("../images/background-image-tablet.png");
         background-size: 100% 45rem;
@@ -66,7 +86,8 @@ $breakpoints: (
     }
     
     .trial-lesson__section-text {
-        font-size: var(--fs-768-14);
+        // font-size: var(--fs-768-14);
+        @include fluid-type($min_width-tlSectionText, $max_width-tlSectionText, $min_font-tlSectionText, $max_font-tlSectionText);
         margin-bottom: 2.1428571em;
         max-width: 32rem;
         margin-right: auto;
@@ -108,8 +129,8 @@ $breakpoints: (
     }
     
     .trial-lesson__wrapper {
-        padding-top: 10rem; //
-        padding-bottom: 10rem; //
+        padding-top: 10rem;
+        padding-bottom: 10rem;
     }
     
     .trial-lesson__section-title {

@@ -8,18 +8,22 @@ $breakpoints: (
 );
 
 .header {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    background-color: var(--clr-secondary-snow-white2);
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	background-color: var(--clr-secondary-snow-white2);
+	position: sticky;
+	top: 0;
+	left: 0;
+    z-index: 10;
 }
 
 .header__wrapper {
-    @include flex(center, flex-end, row-reverse);
+	@include flex(center, flex-end, row-reverse);
 }
 
 @include media(">=desktop") {
-    .header {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-    }
+	.header {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
 }

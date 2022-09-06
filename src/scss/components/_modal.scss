@@ -1,0 +1,390 @@
+@use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+// Fluid Typography
+$min_width-modalTitle: 320px;
+$max_width-modalTitle: 1366px;
+$min_font-modalTitle: 16px;
+$max_font-modalTitle: 28px;
+
+$min_width-modalSubtitle: 320px;
+$max_width-modalSubtitle: 1366px;
+$min_font-modalSubtitle: 12px;
+$max_font-modalSubtitle: 20px;
+
+$min_width-modalFieldName: 320px;
+$max_width-modalFieldName: 1366px;
+$min_font-modalFieldName: 10px;
+$max_font-modalFieldName: 14px;
+
+$min_width-modalSendDataButton: 320px;
+$max_width-modalSendDataButton: 1366px;
+$min_font-modalSendDataButton: 10px;
+$max_font-modalSendDataButton: 14px;
+
+$min_width-modalCancelButton: 320px;
+$max_width-modalCancelButton: 1366px;
+$min_font-modalCancelButton: 10px;
+$max_font-modalCancelButton: 14px;
+
+$min_width-modalCardTitle: 320px;
+$max_width-modalCardTitle: 1366px;
+$min_font-modalCardTitle: 10px;
+$max_font-modalCardTitle: 14px;
+
+$min_width-modalCardNumberOfLessons: 320px;
+$max_width-modalCardNumberOfLessons: 1366px;
+$min_font-modalCardNumberOfLessons: 8px;
+$max_font-modalCardNumberOfLessons: 12px;
+
+$min_width-modalCardLessonLength: 320px;
+$max_width-modalCardLessonLength: 1366px;
+$min_font-modalCardLessonLength: 8px;
+$max_font-modalCardLessonLength: 12px;
+
+$min_width-modalCardFullPrice: 320px;
+$max_width-modalCardFullPrice: 1366px;
+$min_font-modalCardFullPrice: 8px;
+$max_font-modalCardFullPrice: 12px;
+
+$min_width-modalCardPrice: 320px;
+$max_width-modalCardPrice: 1366px;
+$min_font-modalCardPrice: 8px;
+$max_font-modalCardPrice: 12px;
+
+.modal__underlay {
+	background-color: rgba(0, 0, 0, 0.58);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	display: none;
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	max-width: 70rem;
+	min-height: 56rem;
+    min-width: 28rem;
+	transform: translate(-50%, -50%);
+	background-color: var(--clr-secondary-snow-white);
+	@include flex(flex-start, space-between, column);
+	box-sizing: border-box;
+    border-radius: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.modal__header {
+    margin-top: 3rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.modal__title {
+    font-family: var(--ff-normal-500);
+    color: var(--clr-neutral-black);
+    // font-size: var(--fs-320-28);
+    @include fluid-type($min_width-modalTitle, $max_width-modalTitle, $min_font-modalTitle, $max_font-modalTitle);
+}
+
+.modal__subtitle {
+    font-family: var(--ff-normal-400);
+    color: var(--clr-accent-sea-blue);
+    // font-size: var(--fs-320-20);
+    @include fluid-type($min_width-modalSubtitle, $max_width-modalSubtitle, $min_font-modalSubtitle, $max_font-modalSubtitle);
+}
+
+.modal__content {
+    width: 100%;
+}
+
+.modal__modal-form {
+    box-sizing: border-box;
+}
+
+.modal-form {
+    margin-top: 4rem;
+}
+
+.modal-form__field {
+    max-width: 100%;
+    margin-bottom: 3rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    position: relative;
+}
+
+.modal-form__field-name {
+    font-family: var(--ff-normal-500);
+    color: var(--clr-neutral-black);
+    // font-size: var(--fs-320-14);
+    margin-bottom: 1rem;
+    @include fluid-type($min_width-modalFieldName, $max_width-modalFieldName, $min_font-modalFieldName, $max_font-modalFieldName);
+}
+
+.modal-form__name-surname-input {
+    border: 0.2rem solid var(--clr-accent-gray-blue);
+    border-radius: 1.5rem;
+    width: 100%;
+    height: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.modal-form__subfield {
+    margin-bottom: 2.5rem;
+}
+
+.modal-form__phone-number-input {
+    border: 0.2rem solid var(--clr-accent-gray-blue);
+    border-radius: 1.5rem;
+    width: 100%;
+    height: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.modal-form__email-input {
+    border: 0.2rem solid var(--clr-accent-gray-blue);
+    border-radius: 1.5rem;
+    width: 100%;
+    height: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.modal-form__cards-list {
+    @include flex(center, center, row);
+    flex-wrap: wrap;
+}
+
+.modal-form__subfield--type--card {
+    position: relative;
+    margin: 0.5rem;
+}
+
+.modal-form__card-content {
+    position: absolute;
+    width: 14rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -42%);
+    pointer-events: none;
+}
+
+.modal-form__card-title {
+    // font-size: var(--fs-320-14);
+    @include fluid-type($min_width-modalCardTitle, $max_width-modalCardTitle, $min_font-modalCardTitle, $max_font-modalCardTitle);
+    margin-bottom: 1rem;
+}
+
+.modal-form__card-number-of-lessons {
+    // font-size: var(--fs-320-12);
+    @include fluid-type($min_width-modalCardNumberOfLessons, $max_width-modalCardNumberOfLessons, $min_font-modalCardNumberOfLessons, $max_font-modalCardNumberOfLessons);
+}
+
+.modal-form__card-lesson-length {
+    // font-size: var(--fs-320-12);
+    @include fluid-type($min_width-modalCardLessonLength, $max_width-modalCardLessonLength, $min_font-modalCardLessonLength, $max_font-modalCardLessonLength);
+}
+
+.modal-form__card-full-price {
+    margin-bottom: 3.2rem;
+    @include fluid-type($min_width-modalCardFullPrice, $max_width-modalCardFullPrice, $min_font-modalCardFullPrice, $max_font-modalCardFullPrice);
+}
+
+.modal-form__card-price {
+    // font-size: var(--fs-320-12);
+    @include fluid-type($min_width-modalCardPrice, $max_width-modalCardPrice, $min_font-modalCardPrice, $max_font-modalCardPrice);
+}
+
+.modal-form__card {
+    all: unset;
+    display: block;
+    min-width: 10rem;
+    width: 14rem;
+    height: 16rem;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s background-color ease, 0.3s border ease;
+}
+
+.modal-form__card--color--blue {
+    border: 0.3rem solid var(--clr-accent-gray-blue);
+}
+
+.modal-form__card--color--yellow {
+    border: 0.3rem solid var(--clr-accent-gray-blue);
+}
+
+.modal-form__card--color--pink {
+    border: 0.3rem solid var(--clr-accent-gray-blue);
+}
+
+.modal-form__card--color--blue:checked {
+    border: 0.3rem solid var(--clr-hover-sky-blue);
+    background-color: var(--clr-accent-sky-blue);
+    transition: 0.6s background-color ease, 0.6s border ease;
+}
+
+.modal-form__card--color--yellow:checked {
+    border: 0.3rem solid var(--clr-hover-yellow);
+    background-color: var(--clr-accent-yellow);
+    transition: 0.6s background-color ease, 0.6s border ease;
+}
+
+.modal-form__card--color--pink:checked {
+    border: 0.3rem solid var(--clr-hover-pink);
+    background-color: var(--clr-accent-pink);
+    transition: 0.6s background-color ease, 0.6s border ease;
+}
+
+.modal-form__card--color--blue:hover {
+    border: 0.3rem solid var(--clr-accent-sky-blue);
+}
+
+.modal-form__card--color--yellow:hover {
+    border: 0.3rem solid var(--clr-accent-yellow);
+}
+
+.modal-form__card--color--pink:hover {
+    border: 0.3rem solid var(--clr-accent-pink);
+}
+
+.modal-form__card--color--blue:checked:hover {
+    border: 0.3rem solid var(--clr-hover-sky-blue);
+    background-color: var(--clr-hover-sky-blue);
+}
+
+.modal-form__card--color--yellow:checked:hover {
+    border: 0.3rem solid var(--clr-hover-yellow);
+    background-color: var(--clr-hover-yellow);
+}
+
+.modal-form__card--color--pink:checked:hover {
+    border: 0.3rem solid var(--clr-hover-pink);
+    background-color: var(--clr-hover-pink);
+}
+
+.modal-form__card-ruble-sign {
+    width: 0.8rem;
+    height: 1.1rem;
+}
+
+.modal__footer {
+    border-top: solid 0.1rem var(--clr-accent-gray-blue);
+    @include flex(center, center, row);
+    column-gap: 1rem;
+    padding-top: 3rem;
+	background-color: var(--clr-secondary-snow-white);
+    padding-right: 4rem;
+    padding-left: 4rem;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+}
+
+.modal__send-data-button {
+    cursor: pointer;
+    height: 6rem;
+    background-color: var(--clr-accent-blue);
+    width: 100%;
+    border-radius: 1.5rem;
+    font-family: var(--ff-normal-500);
+    color: var(--clr-neutral-white);
+    margin-bottom: 3rem;
+    // font-size: var(--fs-320-14);
+    @include fluid-type($min_width-modalSendDataButton, $max_width-modalSendDataButton, $min_font-modalSendDataButton, $max_font-modalSendDataButton);
+    transition: background-color 0.6s ease;
+    position: relative;
+}
+
+.modal__send-data-button:hover {
+    background-color: var(--clr-accent-dark-blue);
+    transition: background-color 0.3s ease;
+}
+
+.modal__send-data-button:focus {
+    background-color: var(--clr-accent-dark-blue);
+    transition: background-color 0.3s ease;
+}
+
+.modal__cancel-button {
+    cursor: pointer;
+    height: 6rem;
+    width: 100%;
+    border-radius: 1.5rem;
+    font-family: var(--ff-normal-500);
+    // font-size: var(--fs-320-14);
+    @include fluid-type($min_width-modalCancelButton, $max_width-modalCancelButton, $min_font-modalCancelButton, $max_font-modalCancelButton);
+    border: 0.2rem solid var(--clr-accent-gray-blue);
+    margin-bottom: 3rem;
+    transition: background-color 0.6s ease;
+}
+
+.modal__cancel-button:hover {
+    background-color: var(--clr-accent-gray-blue);
+    transition: background-color 0.3s ease;
+}
+
+.modal__cancel-button:focus {
+    background-color: var(--clr-accent-gray-blue);
+    transition: background-color 0.3s ease;
+}
+
+@include media("<=1095px") {
+    .modal-form__card {
+        width: 12rem;
+        height: 14rem;
+    }
+}
+
+@include media("<=975px") {
+    .modal-form {
+        margin-top: 2rem;
+    }
+
+    .modal-form__field {
+        margin-bottom: 2rem;
+    }
+
+    .modal-form__field {
+        margin-bottom: 2rem;
+    }
+}
+
+@include media("<=750px") {
+    .modal-form__card {
+        width: 11rem;
+        height: 13rem;
+    }
+}
+
+@include media("<=663px") {
+    .modal-form__card {
+        width: 10rem;
+        height: 12rem;
+    }
+
+    .modal-form__card-title {
+        margin-bottom: 0;
+    }
+    
+    .modal-form__card-full-price {
+        margin-bottom: 0;
+    }
+
+    .modal-form__card-content {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@include media("<=623px") {
+    .modal-form__card {
+        width: 9rem;
+        height: 11rem;
+    }
+}
