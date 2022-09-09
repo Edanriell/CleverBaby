@@ -14,33 +14,32 @@ $min_font-mobileNav: 18px;
 $max_font-mobileNav: 22px;
 
 .mobile-navigation {
-    display: block; // Temporary
+    display: block;
 }
 
 .mobile-navigation__underlay {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 75%);
     width: 100vw;
     height: 100vh;
-    z-index: 1;
+    z-index: 90;
     display: none;
 }
 
 .mobile-navigation__content {
     position: relative;
     background-color: var(--clr-secondary-snow-white2);
-    z-index: 2;
+    z-index: 90;
     padding-top: 7.5rem;
     padding-bottom: 3.5rem;
     display: none;
 }
 
 .mobile-navigation__menu-item {
-    // font-size: var(--fs-320-18);
+    margin-bottom: 0.8333em;
     @include fluid-type($min_width-mobileNav, $max_width-mobileNav, $min_font-mobileNav, $max_font-mobileNav);
-    margin-bottom: 0.83333333em;
 
     &:last-child {
         margin-bottom: 0;
@@ -83,13 +82,13 @@ $max_font-mobileNav: 22px;
 .mobile-navigation__menu-link:focus::before,
 .mobile-navigation__menu-link:focus::after {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateX(0);
 }
 
 .mobile-navigation__contact-phone {
     display: block;
     font-size: var(--fs-320-18);
-    margin-top: 1.3888888em;
+    margin-top: 1.3889em;
 }
 
 @include media(">=tablet") {    
@@ -101,7 +100,7 @@ $max_font-mobileNav: 22px;
     
     .mobile-navigation__menu-item {
         font-size: var(--fs-768-22);
-        margin-bottom: 0.68181818em;
+        margin-bottom: 0.6818em;
     
         &:last-child {
             margin-bottom: 0;
@@ -114,7 +113,7 @@ $max_font-mobileNav: 22px;
 
     .mobile-navigation__contact-phone {
         font-size: var(--fs-768-18);
-        margin-top: 1.3888888em;
+        margin-top: 1.3889em;
     }
 
     .mobile-navigation__contact-phone-link {

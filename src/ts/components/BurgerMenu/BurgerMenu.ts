@@ -97,8 +97,16 @@ export class BurgerMenu implements IBurgerMenu {
 
 	private toggleBurgerMenuUnderlay(burgerMenuState: string): void {
 		if (burgerMenuState === "false") {
+			this.#toggleZIndex(burgerMenuState, [
+				this.trigger,
+				document.querySelector(".logotype")
+			]);
 			this.#showBurgerMenuUnderlay();
 		} else {
+			this.#toggleZIndex(burgerMenuState, [
+				this.trigger,
+				document.querySelector(".logotype")
+			]);
 			this.#hideBurgerMenuUnderlay();
 		}
 	}
@@ -331,5 +339,17 @@ export class BurgerMenu implements IBurgerMenu {
 				{ opacity: 1, translateX: 0, duration: 1, ease: "power4.out", stagger: 0.2 }
 			);
 		});
+	}
+
+	#toggleZIndex(state: string, elements: (HTMLElement | null)[]): void {
+		if (state === "false") {
+			elements.forEach(element => {
+				if (element) element.style.zIndex = "100";
+			});
+		} else {
+			elements.forEach(element => {
+				if (element) element.style.zIndex = "1";
+			});
+		}
 	}
 }

@@ -18,15 +18,9 @@ $max_width-dataDescription: 768px;
 $min_font-dataDescription: 16px;
 $max_font-dataDescription: 18px;
 
-.contacts-table {
-}
-
 .contacts-table__content {
     padding-top: 5.5rem;
     padding-bottom: calc(6rem - 1.5rem);
-}
-
-.contacts-table__data {
 }
 
 .contacts-table__data-row {
@@ -34,45 +28,45 @@ $max_font-dataDescription: 18px;
 }
 
 .contacts-table__data-title {
-    // font-size: var(--fs-320-14);
-    @include fluid-type($min_width-dataTitle, $max_width-dataTitle, $min_font-dataTitle, $max_font-dataTitle);
     line-height: 2rem;
     color: var(--clr-primary-dark-blue);
-    padding-bottom: 0.35714285em;
+    padding-bottom: 0.3571em;
+    @include fluid-type($min_width-dataTitle, $max_width-dataTitle, $min_font-dataTitle, $max_font-dataTitle);
 }
 
 .contacts-table__data-description {
     font-family: var(--ff-normal-500);
-    @include fluid-type($min_width-dataDescription, $max_width-dataDescription, $min_font-dataDescription, $max_font-dataDescription);
     font-weight: 500;
     line-height: 2.2rem;
     color: var(--clr-primary-dark-blue);
     padding-bottom: 0.9375em;
+    @include fluid-type($min_width-dataDescription, $max_width-dataDescription, $min_font-dataDescription, $max_font-dataDescription);
 }
 
 .contacts-table__data-title-social {
-    padding-bottom: 0.7142857em;
+    padding-bottom: 0.7143em;
 }
 
 .contacts-table__data-content-row {
     @include flex(flex-start, flex-start, row);
 }
 
-.contacts-table__phone-number-link {
-}
-
-.contacts-table__email-link {
-}
-
 .contacts-table__social-link {
     width: 2.4rem;
     height: 2.4rem;
     background: var(--clr-neutral-white);
-    box-shadow: 0 0.2rem 1rem rgba(165, 168, 176, 0.1);
+    box-shadow: 0 0.2rem 1rem rgba(165, 168, 176, 10%);
     display: block;
     border-radius: 50%;
     margin-right: 1.5rem;
+    transition: box-shadow 0.6s ease, transform 0.6s ease;
     @include flex(center, center, row);
+}
+
+.contacts-table__social-link:hover {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 19%) 0 10px 20px, rgba(0, 0, 0, 23%) 0 6px 6px;
+    transform: scale(1.15);
 }
 
 .contacts-table__fb-icon {
@@ -94,11 +88,6 @@ $max_font-dataDescription: 18px;
 }
 
 @include media(">=tablet") {
-    .contacts-table {
-        // background-color: var(--clr-accent-light-blue);
-        // background-color: red;
-    }
-    
     .contacts-table__content {
         padding-top: 7rem;
         padding-bottom: 8rem;
@@ -155,16 +144,13 @@ $max_font-dataDescription: 18px;
 }
 
 @include media(">=desktop") {
-    .contacts-table {
-    }
-    
     .contacts-table__content {
         padding-top: 6rem;
         padding-bottom: 7rem;
         padding-left: 7rem;
         padding-right: 7rem;
         background-color: var(--clr-accent-light-blue);
-        box-shadow: 0 0.4rem 4rem rgba(217, 217, 217, 0.3);
+        box-shadow: 0 0.4rem 4rem rgba(217, 217, 217, 30%);
         border-radius: 1.2rem;
         max-width: 41.3rem;
     }

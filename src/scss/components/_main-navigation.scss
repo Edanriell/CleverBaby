@@ -32,10 +32,9 @@ $max_font-mainNav: 18px;
 
 	.main-navigation__menu-link {
 		position: relative;
-		// font-size: var(--fs-1366-16);
-		@include fluid-type($min_width-mainNav, $max_width-mainNav, $min_font-mainNav, $max_font-mainNav);
 		line-height: 2.2rem;
 		color: var(--clr-primary-dark-blue);
+		@include fluid-type($min_width-mainNav, $max_width-mainNav, $min_font-mainNav, $max_font-mainNav);
 	}
 
 	.main-navigation__menu-link::before {
@@ -65,7 +64,7 @@ $max_font-mainNav: 18px;
 	.main-navigation__menu-link:focus::before,
 	.main-navigation__menu-link:focus::after {
 		opacity: 1;
-		transform: translateX(0px);
+		transform: translateX(0);
 	}
 
 	.main-navigation__contact-phone {

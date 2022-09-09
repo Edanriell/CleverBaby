@@ -8,6 +8,7 @@ $breakpoints: (
 );
 
 // Fluid Typography
+
 $min_width-listItemTitle: 320px;
 $max_width-listItemTitle: 768px;
 $min_font-listItemTitle: 16px;
@@ -21,9 +22,6 @@ $max_font-listItemDescription: 14px;
 .advantages {
     background-color: var(--clr-secondary-snow-white2);
     padding-bottom: 5.5rem;
-}
-
-.advantages__wrapper {
 }
 
 .advantages__list {
@@ -66,24 +64,19 @@ $max_font-listItemDescription: 14px;
     color: var(--clr-primary-dark-blue);
     font-family: var(--ff-normal-500);
     font-weight: 500;
-    // font-size: var(--fs-320-16);
-    @include fluid-type($min_width-listItemTitle, $max_width-listItemTitle, $min_font-listItemTitle, $max_font-listItemTitle);
     line-height: 2.2rem;
     padding-bottom: 0.3125em;
+    @include fluid-type($min_width-listItemTitle, $max_width-listItemTitle, $min_font-listItemTitle, $max_font-listItemTitle);
 }
 
 .advantages__list-item-description {
-    // font-size: var(--fs-320-14);
-    @include fluid-type($min_width-listItemDescription, $max_width-listItemDescription, $min_font-listItemDescription, $max_font-listItemDescription);
     line-height: 2rem;
     color: var(--clr-primary-dark-blue);
+    @include fluid-type($min_width-listItemDescription, $max_width-listItemDescription, $min_font-listItemDescription, $max_font-listItemDescription);
 }
 
 .advantages__list-item-picture-wrapper {
     position: relative;
-}
-
-.advantages__list-item-picture {
 }
 
 .advantages__list-item-picture-arrow1--size--desktop {
@@ -151,7 +144,6 @@ $max_font-listItemDescription: 14px;
 }
 
 @include media(">=tablet") {    
-    // Fluid Typography
     $min_width-listItemTitle: 768px;
     $max_width-listItemTitle: 1366px;
     $min_font-listItemTitle: 18px;
@@ -185,6 +177,12 @@ $max_font-listItemDescription: 14px;
             "item3 . item4"
             "item3 . ."
         ;
+    }
+
+    .advantages__list-item {
+        grid-column: initial;
+        justify-self: start;
+        max-width: initial;
     }
     
     .advantages__list-item:nth-child(1) {
@@ -222,12 +220,6 @@ $max_font-listItemDescription: 14px;
         max-width: initial;
         z-index: 2;
     }
-
-    .advantages__list-item {
-        grid-column: initial;
-        justify-self: start;
-        max-width: initial; // try to change latter
-    }
     
     .advantages__list-item--type--stretched {
         grid-column: initial;
@@ -235,14 +227,12 @@ $max_font-listItemDescription: 14px;
 
     .advantages__list-item-title {
         font-size: var(--fs-768-18);
-        // @include fluid-type($min_width-listItemTitle, $max_width-listItemTitle, $min_font-listItemTitle, $max_font-listItemTitle);
         line-height: 2.5rem;
-        padding-bottom: 0.2777777em;
+        padding-bottom: 0.2778em;
     }
     
     .advantages__list-item-description {
         font-size: var(--fs-768-14);
-        // @include fluid-type($min_width-listItemDescription, $max_width-listItemDescription, $min_font-listItemDescription, $max_font-listItemDescription);
     }
     
     .advantages__list-item-picture-arrow1--size--tablet {

@@ -24,23 +24,16 @@ $max_font-pricingTitle: 36px;
 }
 
 .pricing__title {
-    // font-size: var(--fs-320-22);
-    @include fluid-type($min_width-pricingTitle, $max_width-pricingTitle, $min_font-pricingTitle, $max_font-pricingTitle);
     line-height: 3.08rem;
-    padding-bottom: 0.9090909em;
+    padding-bottom: 0.9091em;
+    @include fluid-type($min_width-pricingTitle, $max_width-pricingTitle, $min_font-pricingTitle, $max_font-pricingTitle);
 }
 
 .pricing__group-list {
-    @include flex(center, center, row);
     flex-wrap: wrap;
     row-gap: 3rem;
     column-gap: 3rem;
-}
-
-.group-list {
-}
-
-.group-list__item {
+    @include flex(center, center, row);
 }
 
 .pricing__image-wrapper{
@@ -63,8 +56,9 @@ $max_font-pricingTitle: 36px;
         background-color: var(--clr-secondary-snow-white2);
         background-image: url("../images/pricing-background-tablet.png");
         background-repeat: no-repeat;
-        // background-size: 100% auto;
         background-size: cover;
+
+        // background-size: 100% auto;
     }
     
     .pricing__wrapper {
@@ -100,8 +94,9 @@ $max_font-pricingTitle: 36px;
     .pricing {
         background-image: url("../images/pricing-background-desktop.png");
         background-repeat: no-repeat;
-        // background-size: 100% auto;
         background-size: cover;
+
+        // background-size: 100% auto;
     }
     
     .pricing__wrapper {
@@ -119,9 +114,6 @@ $max_font-pricingTitle: 36px;
     
     .group-list {
         padding-top: 5rem;
-    }
-    
-    .group-list__item {
     }
 
     .pricing__star-image {

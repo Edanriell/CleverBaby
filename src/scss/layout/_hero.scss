@@ -48,33 +48,30 @@ $max_font-heroText: 16px;
 .hero__title {
     margin-left: 1rem;
     font-family: var(--ff-normal-500b);
-    // font-size: var(--fs-320-28);
-    @include fluid-type($min_width-heroTitle, $max_width-heroTitle, $min_font-heroTitle, $max_font-heroTitle);
     font-weight: 500;
     line-height: 3.9rem;
     color: var(--clr-primary-dark-blue);
+    padding-bottom: 0.3571em;
+    @include fluid-type($min_width-heroTitle, $max_width-heroTitle, $min_font-heroTitle, $max_font-heroTitle);
     @include flex(flex-start, flex-start, column);
-    padding-bottom: 0.357142em;
 }
 
 .hero__subtitle {
     font-family: var(--ff-normal-500b);
-    // font-size: var(--fs-320-16);
-    @include fluid-type($min_width-heroSubtitle, $max_width-heroSubtitle, $min_font-heroSubtitle, $max_font-heroSubtitle);
     font-weight: 500;
     line-height: 2.2rem;
     color: var(--clr-primary-dark-blue);
+    @include fluid-type($min_width-heroSubtitle, $max_width-heroSubtitle, $min_font-heroSubtitle, $max_font-heroSubtitle);
 }
 
 .hero__text {
     margin-left: 1rem;
     font-family: var(--ff-normal-400);
-    // font-size: var(--fs-320-14);
-    @include fluid-type($min_width-heroText, $max_width-heroText, $min_font-heroText, $max_font-heroText);
     line-height: 2rem;
     color: var(--clr-primary-dark-blue);
-    padding-bottom: 1.7857142em;
+    padding-bottom: 1.7857em;
     max-width: max(22.4rem, 68%);
+    @include fluid-type($min_width-heroText, $max_width-heroText, $min_font-heroText, $max_font-heroText);
 }
 
 .hero__image-wrapper {
@@ -126,7 +123,7 @@ $max_font-heroText: 16px;
         margin-left: 0;
         font-size: var(--fs-768-42);
         line-height: 5.9rem;
-        padding-bottom: 0.47619047em;
+        padding-bottom: 0.4762em;
     }
     
     .hero__subtitle {
@@ -139,7 +136,7 @@ $max_font-heroText: 16px;
         font-size: var(--fs-768-16);
         line-height: 2.2rem;
         padding-bottom: 2.50em;
-        max-width: 55.886736%; // 37.5rem
+        max-width: 55.8867%;
     }
     
     .hero__car-image {
@@ -179,7 +176,7 @@ $max_font-heroText: 16px;
     .hero__title {
         font-size: var(--fs-1366-42);
         line-height: 5.9rem;
-        padding-bottom: 0.47619047em;
+        padding-bottom: 0.4762em;
     }
     
     .hero__subtitle {

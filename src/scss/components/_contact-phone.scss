@@ -46,8 +46,8 @@ $max_font-contactPhone: 20px;
     }
 
     .contact-phone__link {
-        @include flex(flex-start, center, row);
         font-size: var(--fs-768-18);
+        @include flex(flex-start, center, row);
     }
 }
 

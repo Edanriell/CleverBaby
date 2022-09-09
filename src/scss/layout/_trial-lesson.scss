@@ -34,21 +34,19 @@ $max_font-tlSectionText: 14px;
 .trial-lesson__section-title {
     font-family: var(--ff-normal-500b);
     font-weight: 500;
-    // font-size: var(--fs-320-22);
-    @include fluid-type($min_width-tlSectionTitle, $max_width-tlSectionTitle, $min_font-tlSectionTitle, $max_font-tlSectionTitle);
     line-height: 2.8rem;
     color: var(--clr-secondary-snow-white2);
     text-align: center;
-    margin-bottom: 0.9090909em;
+    margin-bottom: 0.9091em;
+    @include fluid-type($min_width-tlSectionTitle, $max_width-tlSectionTitle, $min_font-tlSectionTitle, $max_font-tlSectionTitle);
 }
 
 .trial-lesson__section-text {
-    // font-size: var(--fs-320-14);
-    @include fluid-type($min_width-tlSectionText, $max_width-tlSectionText, $min_font-tlSectionText, $max_font-tlSectionText);
     color: var(--clr-secondary-snow-white2);
     line-height: 2rem;
     text-align: center;
-    margin-bottom: 1.78571428em;
+    margin-bottom: 1.7857em;
+    @include fluid-type($min_width-tlSectionText, $max_width-tlSectionText, $min_font-tlSectionText, $max_font-tlSectionText);
 }
 
 .trial-lesson__rainbow-image {
@@ -60,7 +58,6 @@ $max_font-tlSectionText: 14px;
 }
 
 @include media(">=tablet") {
-    // Fluid Typography
     $min_width-tlSectionText: 768px;
     $max_width-tlSectionText: 1366px;
     $min_font-tlSectionText: 14px;
@@ -79,19 +76,18 @@ $max_font-tlSectionText: 14px;
     .trial-lesson__section-title {
         font-size: var(--fs-768-36);
         line-height: 4.5rem;
-        margin-bottom: 0.41666666em;
+        margin-bottom: 0.4167em;
         max-width: 49rem;
         margin-right: auto;
         margin-left: auto;
     }
     
     .trial-lesson__section-text {
-        // font-size: var(--fs-768-14);
-        @include fluid-type($min_width-tlSectionText, $max_width-tlSectionText, $min_font-tlSectionText, $max_font-tlSectionText);
-        margin-bottom: 2.1428571em;
+        margin-bottom: 2.1429em;
         max-width: 32rem;
         margin-right: auto;
         margin-left: auto;
+        @include fluid-type($min_width-tlSectionText, $max_width-tlSectionText, $min_font-tlSectionText, $max_font-tlSectionText);
     }
 
     .trial-lesson__image-wrapper {
@@ -135,7 +131,7 @@ $max_font-tlSectionText: 14px;
     
     .trial-lesson__section-title {
         font-size: var(--fs-1366-36);
-        margin-bottom: 0.55555555em;
+        margin-bottom: 0.5556em;
     }
     
     .trial-lesson__section-text {

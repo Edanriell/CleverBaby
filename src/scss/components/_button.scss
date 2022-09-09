@@ -61,13 +61,13 @@ $breakpoints: (
 }
 
 .button--size--small {
-    padding: 0.7142857em 1.64285em 0.7142857em 1.64285em;
+    padding: 0.7142em 1.6428em;
 }
 
 .button--size--normal {
     font-size: var(--fs-320-16);
     line-height: 2.2rem;
-    padding: 0.7em 1.75em 0.7em 1.75em;
+    padding: 0.7em 1.75em;
 }
 
 @include media(">=tablet") {
@@ -77,13 +77,13 @@ $breakpoints: (
     }
 
     .button--size--small {
-        padding: 0.875em 2.1875em 0.875em 2.1875em;
+        padding: 0.875em 2.1875em;
     }
 
     .button--size--normal {
         font-size: var(--fs-768-16);
         line-height: 2.2rem;
-        padding: 0.69em 1.75em 0.69em 1.75em;
+        padding: 0.69em 1.75em;
     }
 }
 
@@ -94,6 +94,6 @@ $breakpoints: (
 
     .button--size--normal {
         font-size: var(--fs-1366-16);
-        padding: 0.88em 2.19em 0.88em 2.19em;
+        padding: 0.88em 2.19em;
     }
 }

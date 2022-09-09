@@ -44,7 +44,6 @@ $breakpoints: (
     position: relative;
     width: 29rem;
     height: 26.2rem;
-    // border-radius: 1.2rem;
     border-radius: 20px; 
     overflow: hidden;
     transform: translateZ(0);
@@ -94,12 +93,12 @@ $breakpoints: (
 }
 
 .video-player__play-button:hover {
-    background-color: hsl(43, 69%, 58%);
+    background-color: hsl(43deg, 69%, 58%);
     transition: background-color 0.3s ease;
 }
 
 .video-player__play-button:focus {
-    background-color: hsl(43, 69%, 58%);
+    background-color: hsl(43deg, 69%, 58%);
     transition: background-color 0.3s ease;
 }
 

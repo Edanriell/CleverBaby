@@ -30,14 +30,10 @@ $max_font-politics: 14px;
 }
 
 .footer__copyright {
-    // font-size: var(--fs-320-12);
-    @include fluid-type($min_width-copyright, $max_width-copyright, $min_font-copyright, $max_font-copyright);
     color: var(--clr-primary-dark-blue);
     line-height: 1.7rem;
-    margin-bottom: 0.83333333em;
-}
-
-.footer__copyright-link {
+    margin-bottom: 0.8333em;
+    @include fluid-type($min_width-copyright, $max_width-copyright, $min_font-copyright, $max_font-copyright);
 }
 
 .footer__copyright-symbol {
@@ -52,17 +48,12 @@ $max_font-politics: 14px;
 }
 
 .footer__politics {
-    // font-size: var(--fs-320-12);
-    @include fluid-type($min_width-politics, $max_width-politics, $min_font-politics, $max_font-politics);
     color: var(--clr-primary-dark-blue);
     line-height: 1.7rem;
-}
-
-.footer__politics-link {
+    @include fluid-type($min_width-politics, $max_width-politics, $min_font-politics, $max_font-politics);
 }
 
 @include media(">=tablet") {    
-    // Fluid Typography
     $min_width-copyright: 768px;
     $max_width-copyright: 1366px;
     $min_font-copyright: 14px;
@@ -78,10 +69,9 @@ $max_font-politics: 14px;
     }
     
     .footer__copyright {
-        // font-size: var(--fs-768-14);
-        @include fluid-type($min_width-copyright, $max_width-copyright, $min_font-copyright, $max_font-copyright);
         line-height: 2rem;
         margin-bottom: unset;
+        @include fluid-type($min_width-copyright, $max_width-copyright, $min_font-copyright, $max_font-copyright);
     }
     
     .footer__copyright-symbol {
@@ -90,17 +80,16 @@ $max_font-politics: 14px;
     }
     
     .footer__politics {
-        // font-size: var(--fs-768-14);
-        @include fluid-type($min_width-politics, $max_width-politics, $min_font-politics, $max_font-politics);
         line-height: 2rem;
+        @include fluid-type($min_width-politics, $max_width-politics, $min_font-politics, $max_font-politics);
     }
 }
 
 @include media(">=desktop") {
     .footer__wrapper {
-        @include flex(flex-start, space-between, row);
         padding-top: 4.5rem;
         padding-bottom: 4.5rem;
+        @include flex(flex-start, space-between, row);
     }
     
     .footer__copyright {

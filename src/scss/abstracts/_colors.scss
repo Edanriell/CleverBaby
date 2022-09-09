@@ -1,31 +1,31 @@
 $colors: (
 	primary: (
-		"dark-blue": hsl(223, 66%, 21%), //#122659
-		"dark-blue2": hsl(223, 66%, 21%),  // delete
+		"dark-blue": hsl(223deg, 66%, 21%),
+		"dark-blue2": hsl(223deg, 66%, 21%),
 	),
 	secondary: (
-		"snow-white": hsl(37, 67%, 98%), //#FDFAF5
-		"snow-white2": hsl(30, 67%, 99%), //#FEFCFA
+		"snow-white": hsl(37deg, 67%, 98%),
+		"snow-white2": hsl(30deg, 67%, 99%),
 		),
 	accent: (
-		"yellow": hsl(40, 100%, 76%), //#FFD787
-		"bright-yellow": hsl(43, 88%, 64%), //#F4C752
-		"sky-blue": hsl(188, 63%, 73%), //#8DD9E5
-		"light-blue": hsl(204, 45%, 98%), // F7FAFC
-		"pink": hsl(343, 97%, 86%), //#FEB9CC
-		"sea-blue": hsl(227, 23%, 38%),
-		"gray-blue": hsl(223, 21%, 94%),
-		"blue": #004eec,
-		"dark-blue": #0038a7
+		"yellow": hsl(40deg, 100%, 76%),
+		"bright-yellow": hsl(43deg, 88%, 64%),
+		"sky-blue": hsl(188deg, 63%, 73%),
+		"light-blue": hsl(204deg, 45%, 98%),
+		"pink": hsl(343deg, 97%, 86%),
+		"sea-blue": hsl(227deg, 23%, 38%),
+		"gray-blue": hsl(223deg, 21%, 94%),
+		"blue": hsl(220deg, 100%, 46%),
+		"dark-blue": hsl(220deg, 100%, 33%)
 	),
 	neutral: (
-		"white": hsl(0, 0%, 100%), //#FFFFFF
-		"gray-blue": hsl(222, 13%, 46%), //#677085
-		"black": hsl(233, 33%, 10%)
+		"white": hsl(0deg, 0%, 100%),
+		"gray-blue": hsl(222deg, 13%, 46%),
+		"black": hsl(233deg, 33%, 10%)
 	),
 	hover: (
-		"yellow": hsl(40, 54%, 64%), //#FFD787
-		"sky-blue": hsl(188, 43%, 65%), //#8DD9E5
-		"pink": hsl(343, 43%, 73%), //#FEB9CC
+		"yellow": hsl(40deg, 54%, 64%),
+		"sky-blue": hsl(188deg, 43%, 65%), 
+		"pink": hsl(343deg, 43%, 73%),
 	)
 );

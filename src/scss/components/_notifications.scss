@@ -1,6 +1,7 @@
 @use "../abstracts/mixins" as *;
 
 // Fluid Typography
+
 $min_width-notificationTypeText: 320px;
 $max_width-notificationTypeText: 1366px;
 $min_font-notificationTypeText: 14px;
@@ -15,6 +16,7 @@ $max_font-notificationText: 14px;
     // display: grid;
     // grid-template-rows: 1fr;
     // row-gap: 2.5rem;
+
     position: fixed;
     bottom: 0;
     left: 50%;
@@ -24,28 +26,30 @@ $max_font-notificationText: 14px;
 }
 
 .notification {
+    // border-top-left-radius: 0.6rem;
+    // border-top-right-radius: 0.6rem;
+    // box-sizing: border-box;
+
     position: relative;
     min-height: 10rem;
     display: flex;
     align-items: center;
-    // box-sizing: border-box;
     color: #000;
-    background-color: #ffffff;
-    // border-top-left-radius: 0.6rem;
-    // border-top-right-radius: 0.6rem;
-    box-shadow: rgba(0, 0, 0, 0.4) 0rem 3rem 9rem;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 40%) 0 3rem 9rem;
 }
 
-.notification__content-wrapper { // change
+.notification__content-wrapper {
+    // padding-left: 9.8rem;
+    // padding-right: 9.8rem;
     // min-height: 12rem;
+    // max-width: calc(117rem + (9.8rem * 2));
+
     min-width: 30.2rem;
     display: flex;
     align-items: center;
     position: relative;
-    // max-width: calc(117rem + (9.8rem * 2));
     margin: 0 auto;
-    // padding-left: 9.8rem;
-    // padding-right: 9.8rem;
 }
 
 .notification__icon-wrapper {
@@ -72,15 +76,13 @@ $max_font-notificationText: 14px;
     color: #193643;
     font-family: var(--ff-normal-800);
     font-style: normal;
-    // font-size: 2rem;
     @include fluid-type($min_width-notificationTypeText, $max_width-notificationTypeText, $min_font-notificationTypeText, $max_font-notificationTypeText);
 }
 
 .notification__text {
-    // font-size: 1.6rem;
-    @include fluid-type($min_width-notificationText, $max_width-notificationText, $min_font-notificationText, $max_font-notificationText);
     font-family: var(--ff-normal-300);
     font-style: normal;
+    @include fluid-type($min_width-notificationText, $max_width-notificationText, $min_font-notificationText, $max_font-notificationText);
 }
 
 .notification__text--color--red {
