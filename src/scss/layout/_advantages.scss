@@ -36,6 +36,10 @@ $max_font-listItemDescription: 14px;
     max-width: 32.7rem;
 }
 
+.advantages__list-item-padding {
+    padding-bottom: 2.5rem;
+}
+
 .advantages__list-item:nth-child(1) {
     order: 1;
 }
